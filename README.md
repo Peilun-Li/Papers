@@ -13,7 +13,7 @@
 <!-- tocstop -->
 
 ## CNN
-### [RCNN](cnn/RCNN.pdf)
+### [RCNN](CNN/RCNN.pdf)
 ```
 Ross Girshick, CVPR 2014
 Workflow: selective search for region proposals -> AlexNet top layer features -> SVM classification
