@@ -1,4 +1,5 @@
 # Papers
+![Legend for colors in papers](legend.png)
 ## Table of Contents
 
 <!-- toc -->
