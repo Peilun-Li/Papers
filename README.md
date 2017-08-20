@@ -1,4 +1,5 @@
 # Papers
+<img src="legend.png" height="30">
 ![Legend for colors in papers](legend.png)
 ## Table of Contents
 
