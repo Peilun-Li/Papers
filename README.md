@@ -1,5 +1,6 @@
 # Papers
 <img src="legend.png" height="30">
+
 ## Table of Contents
 
 <!-- toc -->
