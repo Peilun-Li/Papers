@@ -10,6 +10,7 @@
 - [RNN](#rnn)
 - [GAN](#gan)
   * [GAN](#gan-1)
+  * [SimGAN](#simgan)
 - [other NN](#other-nn)
 - [other ML](#other-ml)
 
@@ -51,6 +52,27 @@ To read:
   Goodfellow, I. J., Warde-Farley, D., Mirza, M., Courville, A., and Bengio, Y. (2013a). Maxout networks. In ICML’2013. (piecewise linear unit)
   Hinton, G. E., Srivastava, N., Krizhevsky, A., Sutskever, I., and Salakhutdinov, R. (2012b). Improving neural networks by preventing co-adaptation of feature detectors. Technical report, arXiv:1207.0580. (dropout)
   Breuleux, O., Bengio, Y., and Vincent, P. (2011). Quickly generating representative samples from an RBM-derived process. Neural Computation, 23(8), 2053–2073. (Gaussian Parzen window parameter estimation)
+```
+### [SimGAN](GAN/SimGAN.pdf)
+```
+Ashish Shrivastava, CVPR 2017
+Workflow: 
+  A standard GAN with
+    Self-regularization term (to preserve annotation)
+    Local adversarial loss (to avoid artifacts) 
+    Images history for training discriminator
+  Fully CNN for both R and D for pixel level refining and local adversarial loss
+Thoughts:
+  Labeling large datasets is expensive and time consuming -> use refined synthetic images
+  Self-regularization loss to preserve annotations (CAN BE CUSTOMIZED)
+  Single strong discriminator may "overfit" -> use local combinations (local adversarial loss)
+  "Moving average" on synthetic images for discriminator's training to stablize
+  Similar receptive field for R and D (R uses ResNet)
+Concepts: Simulated+Unsupervised(S+U) learning, refiner network
+To read:
+  A. Gaidon, Q. Wang, Y. Cabon, and E. Vig. Virtual worlds as proxy for multi-object tracking analysis. In Proc. CVPR, 2016. (pretraining on synthetic data)
+  T. Salimans, I. Goodfellow, W. Zaremba, V. Che- ung, A. Radford, and X. Chen. Improved techniques for training gans. arXiv preprint arXiv:1606.03498, 2016. (running average on parameters for GAN training)
+SecretKey: moving average, Img2Vec
 ```
 ## other NN
 
