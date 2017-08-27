@@ -7,6 +7,7 @@
 
 - [CNN](#cnn)
   * [RCNN](#rcnn)
+  * [CRN](#crn)
 - [RNN](#rnn)
 - [GAN](#gan)
   * [GAN](#gan-1)
@@ -29,6 +30,29 @@ To read:
   M. Zeiler, G. Taylor, and R. Fergus. Adaptive deconvolutional networks for mid and high level feature learning. In CVPR, 2011. (visualization)
   P. Felzenszwalb, R. Girshick, D. McAllester, and D. Ra- manan. Object detection with discriminatively trained part based models. TPAMI, 2010. (hard negative mining)
   K. Sung and T. Poggio. Example-based learning for view-based human face detection. Technical Report A.I. Memo No. 1521, Massachussets Institute of Technology, 1994. (hard negative mining)
+```
+### [CRN](CNN/CRN.pdf)
+```
+Qifeng Chen, ICCV 2017
+Workflow: 
+  An end-to-end CNN to generate synthetic images from semantic layouts
+    Progress refinement: start from small images, multiple CNN modules to upsample
+    Modified loss that encourages generating diverse images in one shot. (akin to k-means)
+  Dataset: (photo, semantic segmentation)
+Thoughts:
+  An inverse of semantic segmentation (an underconstrained one-to-many problem)
+  Coordinate global structure from low resolution (when distant objects are close)
+  Progress refinement to generate high resolution
+  Model capacity is essential for generating high resolution synthetic images
+  Loss function between original image and synthetic image: COMPARE CNN LAYERS FEATURES (content representation)
+  A loss akin to k-means, to encourage generating diverse images.
+Concepts: Cascaded Refinement Network (CRN), reference image (original image)
+To read:
+  M. Arjovsky and L. Bottou. Towards principled methods for training generative adversarial networks. In ICLR, 2017. (GAN's unstable)
+  L. Metz, B. Poole, D. Pfau, and J. Sohl-Dickstein. Unrolled generative adversarial networks. In ICLR, 2017. (GAN's unstable)
+  L.A.Gatys,A.S.Ecker,andM.Bethge.Imagestyletransfer using convolutional neural networks. In CVPR, 2016. (content representation)
+  A. Nguyen, J. Yosinski, Y. Bengio, A. Dosovitskiy, and J. Clune. Plug & play generative networks: Conditional iter- ative generation of images in latent space. In CVPR, 2017. (conditional synthesis of diverse images)
+SecretKey: content representation for annotation
 ```
 ## RNN
 
