@@ -8,6 +8,7 @@
 - [CNN](#cnn)
   * [RCNN](#rcnn)
   * [CRN](#crn)
+  * [FCN-SemanticSeg](#fcn-semanticseg)
 - [RNN](#rnn)
 - [GAN](#gan)
   * [GAN](#gan-1)
@@ -53,6 +54,29 @@ To read:
   L.A.Gatys,A.S.Ecker,andM.Bethge.Imagestyletransfer using convolutional neural networks. In CVPR, 2016. (content representation)
   A. Nguyen, J. Yosinski, Y. Bengio, A. Dosovitskiy, and J. Clune. Plug & play generative networks: Conditional iter- ative generation of images in latent space. In CVPR, 2017. (conditional synthesis of diverse images)
 SecretKey: content representation for annotation
+```
+### [FCN-SemanticSeg](CNN/FCN-SemanticSeg.pdf)
+```
+Jonathan Long, Evan Shelhamer, CVPR 2015
+Workflow:
+  Fully convolutional neural network for semantic segmentation:
+    Transfer learning from ImageNet
+    Convert classification networks to FCN (FC to C like sliding window)
+    Pixel-wise final convolution to produce heapmap
+    Deconvolution (bilinear upsample) on output heatmap to generate segmentation
+    A skip architecture to generate detailed segmentation (deconvolution trainable here)
+    First train converted FCN, then add skip architecture(s) to upgrade
+Thoughts:
+  Semantic segmentation is a combination of semantics (what) and location (where)
+  Reinterpret techniques as equivalent network modifications
+  Convert fully connected layer to convolutional layer (which produces heatmap)
+  ILSVRC init of upper layers is important
+Concepts: receptive field, deconvolution, line search
+To read:
+  J. Donahue, Y. Jia, O. Vinyals, J. Hoffman, N. Zhang, E. Tzeng, and T. Darrell. DeCAF: A deep convolutional acti- vation feature for generic visual recognition. In ICML, 2014. (transfer learning)
+  M. D. Zeiler and R. Fergus. Visualizing and understanding convolutional networks. In Computer Vision–ECCV 2014, pages 818–833. Springer, 2014. (transfer learning)
+  A. Giusti, D. C. Cires ̧an, J. Masci, L. M. Gambardella, and J. Schmidhuber. Fast image scanning with deep max-pooling convolutional neural networks. In ICIP, 2013. (fast scanning)
+SecretKey: complicated NN is still simpler than hand crafted rules (adding edges/links may be closer to brain); knowledge can be widely applied (SemanticSeg & Detection)
 ```
 ## RNN
 
