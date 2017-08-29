@@ -15,12 +15,14 @@
   * [SimGAN](#simgan)
 - [other NN](#other-nn)
 - [other ML](#other-ml)
+  * [GTAV](#gtav)
 
 <!-- tocstop -->
 
 ## CNN
 ### [RCNN](CNN/RCNN.pdf)
 ```
+Rich feature hierarchies for accurate object detection and semantic segmentation
 Ross Girshick, CVPR 2014
 Workflow: Selective search for region proposals -> AlexNet top layer features -> SVM classification
 Thoughts: Transfer learning from ImageNet, visualization, bias on positive samples
@@ -34,6 +36,7 @@ To read:
 ```
 ### [CRN](CNN/CRN.pdf)
 ```
+Photographic Image Synthesis with Cascaded Refinement Networks
 Qifeng Chen, ICCV 2017
 Workflow: 
   An end-to-end CNN to generate synthetic images from semantic layouts
@@ -57,6 +60,7 @@ SecretKey: content representation for annotation
 ```
 ### [FCN-SemanticSeg](CNN/FCN-SemanticSeg.pdf)
 ```
+Fully Convolutional Networks for Semantic Segmentation
 Jonathan Long, Evan Shelhamer, CVPR 2015
 Workflow:
   Fully convolutional neural network for semantic segmentation:
@@ -83,6 +87,7 @@ SecretKey: complicated NN is still simpler than hand crafted rules (adding edges
 ## GAN
 ### [GAN](GAN/GAN.pdf)
 ```
+Generative Adversarial Nets
 Ian J. Goodfellow, NIPS 2014
 Workflow: 
   Training generator and discriminator alternatively using sgd and bp (with different step)
@@ -103,6 +108,7 @@ To read:
 ```
 ### [SimGAN](GAN/SimGAN.pdf)
 ```
+Learning from Simulated and Unsupervised Images through Adversarial Training
 Ashish Shrivastava, CVPR 2017
 Workflow: 
   A standard GAN with
@@ -125,3 +131,15 @@ SecretKey: moving average, Img2Vec
 ## other NN
 
 ## other ML
+### [GTAV](other_ML/GTAV.pdf)
+```
+Driving in the Matrix: Can Virtual Worlds Replace Human-Generated Annotations for Real World Tasks?
+Matthew Johnson-Roberson, ICRA 2017
+Workflow:
+  Collect simulated data and annotation from GTA V
+  Transfer learning from ImageNet pretrained VGG16 using only simulated data
+  Faster-RCNN
+Thoughts:
+  Simulated data can achieve high level performance without assistance of real data
+Concepts: depth buffer, stencil buffer
+```
