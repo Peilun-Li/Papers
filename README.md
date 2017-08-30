@@ -7,6 +7,7 @@
 
 - [CNN](#cnn)
   * [RCNN](#rcnn)
+  * [Fast R-CNN](#fast-r-cnn)
   * [CRN](#crn)
   * [FCN-SemanticSeg](#fcn-semanticseg)
 - [RNN](#rnn)
@@ -33,6 +34,30 @@ To read:
   M. Zeiler, G. Taylor, and R. Fergus. Adaptive deconvolutional networks for mid and high level feature learning. In CVPR, 2011. (visualization)
   P. Felzenszwalb, R. Girshick, D. McAllester, and D. Ra- manan. Object detection with discriminatively trained part based models. TPAMI, 2010. (hard negative mining)
   K. Sung and T. Poggio. Example-based learning for view-based human face detection. Technical Report A.I. Memo No. 1521, Massachussets Institute of Technology, 1994. (hard negative mining)
+```
+### [Fast R-CNN](CNN/FastRCNN.pdf)
+```
+Fast R-CNN
+Ross Girshick, ICCV 2015
+Workflow:
+  Network:
+    Input image and set of object proposals
+    RoI pooling layer to extract fixed length feature vector, based on conv feature map on input image, and proposal coords
+    Feed feature vector into fc, with two sibling output layers: softmax class prob, and bounding box regression for each class
+  Transfer learning from ImageNet pretrianed networks
+  Normalize ground truth regression targets
+  Multi-task loss and scale invariant bounding box regression offsets
+Thoughts:
+  Sharing computation can speed up
+  RoI layer is a speciall case of spatial pyramid pooling layer in SPPnets
+  Truncated SVD can speed up fc layers
+  Multi-task training improves classification accuracy
+  Deep ConvNets are adept at learning scale invariance directly
+Concepts:
+To read:
+  K.He,X.Zhang,S.Ren,andJ.Sun.Spatialpyramidpooling in deep convolutional networks for visual recognition. In ECCV,2014. (SPPnets)
+  S. Lazebnik, C. Schmid, and J. Ponce. Beyond bags of features: Spatial pyramid matching for recognizing natural scene categories. In CVPR, 2006. (spatial paramid pooling)
+SecretKey: Experiments results verify concerns, loss function matters, end-to-end often outperforms doing separately
 ```
 ### [CRN](CNN/CRN.pdf)
 ```
