@@ -35,6 +35,18 @@ To read:
   P. Felzenszwalb, R. Girshick, D. McAllester, and D. Ra- manan. Object detection with discriminatively trained part based models. TPAMI, 2010. (hard negative mining)
   K. Sung and T. Poggio. Example-based learning for view-based human face detection. Technical Report A.I. Memo No. 1521, Massachussets Institute of Technology, 1994. (hard negative mining)
 ```
+### [SPP-net](CNN/SPPnets.pdf)
+```
+Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition
+Kaiming He, TPAMI 2015
+Workflow:
+  Generate fixed-length representation regardless of image size/scale
+    SPP layer between C and FC to allow inputting different image sizes
+Thoughts:
+  Training/Running a detector on feature maps is a popular idea
+Concepts: Spatial pyramid pooling
+SecretKey: CNN requires fixed input size (RNN?)
+```
 ### [Fast R-CNN](CNN/FastRCNN.pdf)
 ```
 Fast R-CNN
@@ -53,7 +65,6 @@ Thoughts:
   Truncated SVD can speed up fc layers
   Multi-task training improves classification accuracy
   Deep ConvNets are adept at learning scale invariance directly
-Concepts:
 To read:
   K.He,X.Zhang,S.Ren,andJ.Sun.Spatialpyramidpooling in deep convolutional networks for visual recognition. In ECCV,2014. (SPPnets)
   S. Lazebnik, C. Schmid, and J. Ponce. Beyond bags of features: Spatial pyramid matching for recognizing natural scene categories. In CVPR, 2006. (spatial paramid pooling)
