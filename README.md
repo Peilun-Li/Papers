@@ -18,6 +18,7 @@
 - [other NN](#other-nn)
 - [other ML](#other-ml)
   * [GTAV](#gtav)
+  * [Playing for Data](#playing-for-data)
 
 <!-- tocstop -->
 
@@ -179,4 +180,13 @@ Workflow:
 Thoughts:
   Simulated data can achieve high level performance without assistance of real data
 Concepts: depth buffer, stencil buffer
+```
+### [Playing for Data](other_ML/PlayingForData.pdf)
+```
+Playing for Data: Ground Truth from Computer Games
+Stephan R. Richter, Vibhav Vineet, ECCV 2016
+Workflow:
+  Collect image and segmentation data from GTA V
+  Mixing training segmentation model with virtual data and real world data
+Concepts: detouring
 ```
