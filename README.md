@@ -7,6 +7,7 @@
 
 - [CNN](#cnn)
   * [RCNN](#rcnn)
+  * [SPP-net](#spp-net)
   * [Fast R-CNN](#fast-r-cnn)
   * [CRN](#crn)
   * [FCN-SemanticSeg](#fcn-semanticseg)
