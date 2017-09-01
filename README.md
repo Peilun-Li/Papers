@@ -9,6 +9,7 @@
   * [RCNN](#rcnn)
   * [SPP-net](#spp-net)
   * [Fast R-CNN](#fast-r-cnn)
+  * [Faster R-CNN](#faster-r-cnn)
   * [CRN](#crn)
   * [FCN-SemanticSeg](#fcn-semanticseg)
 - [RNN](#rnn)
@@ -72,6 +73,17 @@ To read:
   K.He,X.Zhang,S.Ren,andJ.Sun.Spatialpyramidpooling in deep convolutional networks for visual recognition. In ECCV,2014. (SPPnets)
   S. Lazebnik, C. Schmid, and J. Ponce. Beyond bags of features: Spatial pyramid matching for recognizing natural scene categories. In CVPR, 2006. (spatial paramid pooling)
 SecretKey: Experiments results verify concerns, loss function matters, end-to-end often outperforms doing separately
+```
+### [Faster R-CNN](CNN/FasterRCNN.pdf)
+```
+Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks
+Shaoqing Ren
+Workflow:
+  Region Proposal Network
+  Approximate joint training / Alternating training
+Throughts:
+ Feature maps may be reused
+Concepts: anchor
 ```
 ### [CRN](CNN/CRN.pdf)
 ```
