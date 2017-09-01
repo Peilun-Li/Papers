@@ -15,6 +15,7 @@
 - [GAN](#gan)
   * [GAN](#gan-1)
   * [SimGAN](#simgan)
+  * [CycleGAN](#cyclegan)
 - [other NN](#other-nn)
 - [other ML](#other-ml)
   * [GTAV](#gtav)
@@ -165,6 +166,23 @@ To read:
   A. Gaidon, Q. Wang, Y. Cabon, and E. Vig. Virtual worlds as proxy for multi-object tracking analysis. In Proc. CVPR, 2016. (pretraining on synthetic data)
   T. Salimans, I. Goodfellow, W. Zaremba, V. Che- ung, A. Radford, and X. Chen. Improved techniques for training gans. arXiv preprint arXiv:1606.03498, 2016. (running average on parameters for GAN training)
 SecretKey: moving average, Img2Vec
+```
+### [CycleGAN](gan/CycleGAN.pdf)
+```
+Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks
+Jun-Yan Zhu, Taesung Park, ICCV 2017 (submitted)
+Workflow:
+  Two G and two D form a cycle
+  A cycle consistency loss
+  History of generated images to reduce model oscillation (moving average)
+  Identity mapping for painting->photo, to preserve color composition
+Thoughts:
+  GAN mapping is highly under-constrained
+  Can be viewed as training two autoencoders
+Concepts: adversarial loss, cycle consistency loss
+To read:
+  Many (unpaired image to image translation)
+SecretKey: autoencoders reuse, identity mapping (resnet)
 ```
 ## other NN
 
