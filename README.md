@@ -10,6 +10,7 @@
   * [SPP-net](#spp-net)
   * [Fast R-CNN](#fast-r-cnn)
   * [Faster R-CNN](#faster-r-cnn)
+  * [Batch Normalization](#batch-normalization)
   * [CRN](#crn)
   * [FCN-SemanticSeg](#fcn-semanticseg)
 - [RNN](#rnn)
@@ -81,9 +82,41 @@ Shaoqing Ren
 Workflow:
   Region Proposal Network
   Approximate joint training / Alternating training
-Throughts:
+Thoughts:
  Feature maps may be reused
 Concepts: anchor
+```
+### [Batch Normalization](CNN/BatchNorm.pdf)
+```
+Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift
+Sergey Ioffe, ICML 2015
+Workflow:
+  Normalize each scalar feature independently for each mini-batch, and
+  Extra linear transformation which can represent identity transformation together with the normalization part
+  Add before nonlinearity (ReLU, sigmoid, etc.)
+  Use global mean and var of training data for inference
+  BN network adapation:
+    Increase learning rate
+    Remove dropout
+    Reduce L2 weight regularization
+    Accelerate learning rate decay
+    Remove local response normalization
+    Shuffle training examples more thoroughly
+    Reduce photometric distortions
+Thoughts:
+  Eliminate internal covariate shift can speed up training
+  Ensemble
+  Training converges faster if inputs are whitened
+  BN enables higher learning rates:
+    Resilient to parameter scale (prevent explosion or vanishment)
+    Prevent getting stuck in the saturated regimes of nonlinearities
+  BN regularizes the model:
+    A training example will be influenced/regularized by other examples within a mini-batch
+Concepts: internal covariate shift
+To read:
+  Sutskever, Ilya, Martens, James, Dahl, George E., and Hinton, Geoffrey E. On the importance of initialization and momentum in deep learning. In ICML (3), volume 28 of JMLR Proceedings, pp. 1139–1147. JMLR.org, 2013. (momentum)
+  Duchi, John, Hazan, Elad, and Singer, Yoram. Adaptive subgradient methods for online learning and stochastic optimization. J.Mach. Learn. Res., 12:2121–2159,July 2011. ISSN 1532-4435. (adagrad)
+SecretKey: tranfer usage of normalization
 ```
 ### [CRN](CNN/CRN.pdf)
 ```
