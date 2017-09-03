@@ -213,7 +213,7 @@ To read:
   T. Salimans, I. Goodfellow, W. Zaremba, V. Che- ung, A. Radford, and X. Chen. Improved techniques for training gans. arXiv preprint arXiv:1606.03498, 2016. (running average on parameters for GAN training)
 SecretKey: moving average, Img2Vec
 ```
-### [pix2pix](gan/pix2pix.pdf)
+### [pix2pix](GAN/pix2pix.pdf)
 ```
 Image-to-Image Translation with Conditional Adversarial Networks
 Phillip Isola, CVPR 2017
@@ -223,7 +223,7 @@ Workflow:
 Thoughts:
   L2 encourages less blurring than L2
 ```
-### [CycleGAN](gan/CycleGAN.pdf)
+### [CycleGAN](GAN/CycleGAN.pdf)
 ```
 Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks
 Jun-Yan Zhu, Taesung Park, ICCV 2017 (submitted)
