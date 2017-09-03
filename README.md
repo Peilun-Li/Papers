@@ -17,6 +17,7 @@
 - [GAN](#gan)
   * [GAN](#gan-1)
   * [SimGAN](#simgan)
+  * [pix2pix](#pix2pix)
   * [CycleGAN](#cyclegan)
 - [other NN](#other-nn)
 - [other ML](#other-ml)
@@ -211,6 +212,16 @@ To read:
   A. Gaidon, Q. Wang, Y. Cabon, and E. Vig. Virtual worlds as proxy for multi-object tracking analysis. In Proc. CVPR, 2016. (pretraining on synthetic data)
   T. Salimans, I. Goodfellow, W. Zaremba, V. Che- ung, A. Radford, and X. Chen. Improved techniques for training gans. arXiv preprint arXiv:1606.03498, 2016. (running average on parameters for GAN training)
 SecretKey: moving average, Img2Vec
+```
+### [pix2pix](gan/pix2pix.pdf)
+```
+Image-to-Image Translation with Conditional Adversarial Networks
+Phillip Isola, CVPR 2017
+Workflow:
+  Generator: a encoder-decoder network with skip connections (U-Net)
+  Conditional GAN (input image and random noise)
+Thoughts:
+  L2 encourages less blurring than L2
 ```
 ### [CycleGAN](gan/CycleGAN.pdf)
 ```
