@@ -16,6 +16,7 @@
 - [RNN](#rnn)
 - [GAN](#gan)
   * [GAN](#gan-1)
+  * [Improved GAN](#improved-gan)
   * [SimGAN](#simgan)
   * [pix2pix](#pix2pix)
   * [CycleGAN](#cyclegan)
@@ -190,6 +191,23 @@ To read:
   Goodfellow, I. J., Warde-Farley, D., Mirza, M., Courville, A., and Bengio, Y. (2013a). Maxout networks. In ICML’2013. (piecewise linear unit)
   Hinton, G. E., Srivastava, N., Krizhevsky, A., Sutskever, I., and Salakhutdinov, R. (2012b). Improving neural networks by preventing co-adaptation of feature detectors. Technical report, arXiv:1207.0580. (dropout)
   Breuleux, O., Bengio, Y., and Vincent, P. (2011). Quickly generating representative samples from an RBM-derived process. Neural Computation, 23(8), 2053–2073. (Gaussian Parzen window parameter estimation)
+```
+### [Improved GAN](GAN/improved-GAN.pdf)
+```
+Workflow:
+  Feature matching: matching G on activations of an intermediate layer of D
+  Minibatch discrimination: An extra matrix (tensor) that produce extra side information of other examples in the minibatch by matrix (tensor) multiplication
+  Historical averaging
+  One-sided label smooting
+  Vitual batch normalization: normalize based on a reference batch
+Thoughts:
+  Game theory: training GANs require finding a Nash equilibrium of a non-convex game
+  When collapse (Helvetica) is about to happen, D's gradient may point to similar directions for many similar points
+Concepts: Nash equilibrium, virtual batch normalization
+To read:
+  AlecRadford,LukeMetz,andSoumithChintala.Unsupervisedrepresentationlearningwithdeepconvolutional generative adversarial networks. arXiv preprint arXiv:1511.06434, 2015. (DCGAN)
+  C. Szegedy, V. Vanhoucke, S. Ioffe, J. Shlens, and Z. Wojna. Rethinking the Inception Architecture for Computer Vision. ArXiv e-prints, December 2015. (label smooting)
+SecretKey: GAN from game theory
 ```
 ### [SimGAN](GAN/SimGAN.pdf)
 ```
