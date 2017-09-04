@@ -194,6 +194,8 @@ To read:
 ```
 ### [Improved GAN](GAN/improved-GAN.pdf)
 ```
+Improved Techniques for Training GANs
+Tim Salimans
 Workflow:
   Feature matching: matching G on activations of an intermediate layer of D
   Minibatch discrimination: An extra matrix (tensor) that produce extra side information of other examples in the minibatch by matrix (tensor) multiplication
