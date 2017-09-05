@@ -17,6 +17,7 @@
 - [GAN](#gan)
   * [GAN](#gan-1)
   * [Improved GAN](#improved-gan)
+  * [DCGAN](#dcgan)
   * [SimGAN](#simgan)
   * [pix2pix](#pix2pix)
   * [CycleGAN](#cyclegan)
@@ -211,6 +212,34 @@ To read:
   C. Szegedy, V. Vanhoucke, S. Ioffe, J. Shlens, and Z. Wojna. Rethinking the Inception Architecture for Computer Vision. ArXiv e-prints, December 2015. (label smooting)
 SecretKey: GAN from game theory
 ```
+### [DCGAN](GAN/DCGAN.pdf)
+```
+Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks
+Alec Radford & Luke Metz, ICLR 2016
+Workflow:
+  Model architectures that enable stable training, higher resolution and deeper generative models
+    All convolutional net (replace spatial pooling with strided convolutions)
+    Eliminated fully connected layers on top of convolutional features    
+    Batch normalization
+Thoughts:
+  Global average pooling increases model stability but hurt convergence speed
+  Batchnorm to all layers but not G's output layer and D's input layer to prevent sample oscillation and model instability
+  Architecture guideline for stable DCGAN
+    Replace pooling layers with strided conv (D) and fractional-strided conv (G)
+    Use batchnorm in both G and D
+    Remove fully connected hidden layers
+    Use ReLU in G for all layers except output (Tanh)
+    Use LeakyReLU in D for all layers
+Concepts:
+To read:
+  Gregor, Karol, Danihelka, Ivo, Graves, Alex, and Wierstra, Daan. Draw: A recurrent neural network for image generation. arXiv preprint arXiv:1502.04623, 2015. (RNN for generativ models)
+  Dosovitskiy, Alexey, Springenberg, Jost Tobias, and Brox, Thomas. Learning to generate chairs with convolutional neural networks. arXiv preprint arXiv:1411.5928, 2014. (deconvolution for generative models)
+  Springenberg, Jost Tobias, Dosovitskiy, Alexey, Brox, Thomas, and Riedmiller, Martin. Striving for simplicity: The all convolutional net. arXiv preprint arXiv:1412.6806, 2014. (all convolutional net)
+  Mordvintsev, Alexander, Olah, Christopher, and Tyka, Mike. Inceptionism : Going deeper into neural networks. (global average pooling)
+  Mikolov, Tomas, Sutskever, Ilya, Chen, Kai, Corrado, Greg S, and Dean, Jeff. Distributed repre- sentations of words and phrases and their compositionality. (word2vec)
+  Dosovitskiy, Alexey, Springenberg, Jost Tobias, and Brox, Thomas. Learning to generate chairs with convolutional neural networks. (conditional generative models)
+SecretKey: reversed face embedding <-> visualization on GAN
+```
 ### [SimGAN](GAN/SimGAN.pdf)
 ```
 Learning from Simulated and Unsupervised Images through Adversarial Training
@@ -241,7 +270,7 @@ Workflow:
   Generator: a encoder-decoder network with skip connections (U-Net)
   Conditional GAN (input image and random noise)
 Thoughts:
-  L2 encourages less blurring than L2
+  L1 encourages less blurring than L2
 ```
 ### [CycleGAN](GAN/CycleGAN.pdf)
 ```
