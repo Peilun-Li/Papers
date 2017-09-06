@@ -12,6 +12,7 @@
   * [Faster R-CNN](#faster-r-cnn)
   * [Batch Normalization](#batch-normalization)
   * [CRN](#crn)
+  * [DenseNet](#densenet)
   * [FCN-SemanticSeg](#fcn-semanticseg)
 - [RNN](#rnn)
 - [GAN](#gan)
@@ -86,7 +87,7 @@ Workflow:
   Region Proposal Network
   Approximate joint training / Alternating training
 Thoughts:
- Feature maps may be reused
+  Feature maps may be reused
 Concepts: anchor
 ```
 ### [Batch Normalization](CNN/BatchNorm.pdf)
@@ -144,6 +145,35 @@ To read:
   L.A.Gatys,A.S.Ecker,andM.Bethge.Imagestyletransfer using convolutional neural networks. In CVPR, 2016. (content representation)
   A. Nguyen, J. Yosinski, Y. Bengio, A. Dosovitskiy, and J. Clune. Plug & play generative networks: Conditional iter- ative generation of images in latent space. In CVPR, 2017. (conditional synthesis of diverse images)
 SecretKey: content representation for annotation
+```
+### [DenseNet](CNN/DenseNet.pdf)
+```
+Densely Connected Convolutional Networks
+Gao Huang, Zhuang Liu, CVPR 2017
+Workflow:
+  DenseNet: connect each layer to every other layer in a dense block
+    Layers can be narrow (small number of filters per layer), forming a collective knowledge
+    DenseNet-B: with bottleneck layer (reduce number of feature maps before 3x3 conv)
+    DenseNet-C: with compression (reduce number of output feature maps in transition layer)
+    DenseNet-BC: combine B and C, most parameter efficient
+Thoughts:
+  DenseNet can:
+    Alleviate vanishing-gradient problem: easy to train
+    Strengthen feature propagation
+    Encourage fature reuse
+    Reduce number of parameters: no need to relearn redundant feature maps
+  Dense connections have a regularization effect (reduce overfitting)
+  Feature reuse
+  1x1 conv can be seen as changing number of filters
+  Deep supervision: layers recive additional supervision from loss function through shorter connections
+  Visualization on weights to validate shorter connections are useful
+  DenseNet integrates identity mapping, deep supervision and diversified depth
+Concepts: dense blocks, transition layers, growth rate, bottleneck layer, deep supervision
+To read:
+  Q. Liao and T. Poggio. Bridging the gaps between residual learning, recurrent neural networks and visual cortex. arXiv preprint arXiv:1604.03640, 2016. (resnet and rnn)
+  C.-Y.Lee,S.Xie,P.Gallagher,Z.Zhang,andZ.Tu.Deeply- supervised nets. In AISTATS, 2015. (deep supervision)
+  G. Huang, Y. Sun, Z. Liu, D. Sedra, and K. Q. Weinberger. Deep networks with stochastic depth. (Stochastic depth regularization for resnet)
+SecretKey: ResNet<->RNN
 ```
 ### [FCN-SemanticSeg](CNN/FCN-SemanticSeg.pdf)
 ```
@@ -208,7 +238,7 @@ Thoughts:
   When collapse (Helvetica) is about to happen, D's gradient may point to similar directions for many similar points
 Concepts: Nash equilibrium, virtual batch normalization
 To read:
-  AlecRadford,LukeMetz,andSoumithChintala.Unsupervisedrepresentationlearningwithdeepconvolutional generative adversarial networks. arXiv preprint arXiv:1511.06434, 2015. (DCGAN)
+  AlecRadford, Luke Metz, and Soumith Chintala. Unsupervised representation learning with deep convolutional generative adversarial networks. arXiv preprint arXiv:1511.06434, 2015. (DCGAN)
   C. Szegedy, V. Vanhoucke, S. Ioffe, J. Shlens, and Z. Wojna. Rethinking the Inception Architecture for Computer Vision. ArXiv e-prints, December 2015. (label smooting)
 SecretKey: GAN from game theory
 ```
