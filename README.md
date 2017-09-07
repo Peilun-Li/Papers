@@ -12,6 +12,7 @@
   * [Faster R-CNN](#faster-r-cnn)
   * [Batch Normalization](#batch-normalization)
   * [CRN](#crn)
+  * [Inception](#inception)
   * [DenseNet](#densenet)
   * [FCN-SemanticSeg](#fcn-semanticseg)
 - [RNN](#rnn)
@@ -75,7 +76,7 @@ Thoughts:
   Multi-task training improves classification accuracy
   Deep ConvNets are adept at learning scale invariance directly
 To read:
-  K.He,X.Zhang,S.Ren,andJ.Sun.Spatialpyramidpooling in deep convolutional networks for visual recognition. In ECCV,2014. (SPPnets)
+  K.He, X.Zhang, S.Ren, and J.Sun. Spatial pyramid pooling in deep convolutional networks for visual recognition. In ECCV,2014. (SPPnets)
   S. Lazebnik, C. Schmid, and J. Ponce. Beyond bags of features: Spatial pyramid matching for recognizing natural scene categories. In CVPR, 2006. (spatial paramid pooling)
 SecretKey: Experiments results verify concerns, loss function matters, end-to-end often outperforms doing separately
 ```
@@ -145,6 +146,26 @@ To read:
   L.A.Gatys,A.S.Ecker,andM.Bethge.Imagestyletransfer using convolutional neural networks. In CVPR, 2016. (content representation)
   A. Nguyen, J. Yosinski, Y. Bengio, A. Dosovitskiy, and J. Clune. Plug & play generative networks: Conditional iter- ative generation of images in latent space. In CVPR, 2017. (conditional synthesis of diverse images)
 SecretKey: content representation for annotation
+```
+### [Inception](CNN/Inception.pdf)
+```
+Going Deeper with Convolutions
+Christian Szegedy, CVPR 2015
+Workflow:
+  Inception models:
+    Parallel & Concat filters: 1x1 conv, 1x1 & 3x3 conv, 1x1 & 5x5 conv, 3x3 maxpool & 1x1 conv
+    1x1 conv before 3x3 and 5x5 conv to reduce computation
+Thoughts:
+  Sparse computation is much slowser than dense computation for today's computing (overhead of lookups and cache misses)
+  How to approximate sparse structure using dense components -> parallel different conv sizes
+  Middle layer features are discriminative -> add auxiliary classifiers on intermediate layers
+  Auxiliary classifiers can combat gradient vanishing and provide regularization
+  Training models on different crop sizes
+Concepts: Hebbian principle (biology), Inception, GoogLeNet
+To read:
+  M. Lin, Q. Chen, and S. Yan. Network in network. CoRR, abs/1312.4400, 2013. (1x1 conv, average pooling)
+  A. G. Howard. Some improvements on deep con- volutional neural network based image classification. CoRR, abs/1312.5402, 2013. (model improvement)
+SecretKey: dense<->sparse
 ```
 ### [DenseNet](CNN/DenseNet.pdf)
 ```
