@@ -167,6 +167,33 @@ To read:
   A. G. Howard. Some improvements on deep con- volutional neural network based image classification. CoRR, abs/1312.5402, 2013. (model improvement)
 SecretKey: dense<->sparse
 ```
+### [Inception v2 & v3](CNN/Inception-v2v3.pdf)
+```
+Rethinking the Inception Architecture for Computer Vision
+Christian Szegedy, CVPR 2016
+Workflow:
+  Inception-v2:
+    Replace 5x5, 7x7 conv with multi-layer 3x3 conv (holding same input & output shape)
+    LSR: encourage model to be less confident
+  Inception-v3:
+    Add batch normalization for FC layer in auxiliary classifier, based on v2
+Thoughts:
+  Architectural improvements in NN can improve performance
+  General NN design principles:
+    Representation size should decrease from input to the output
+    Increasing activations allos for more disentangled features
+    Spatial aggregation in lower dimension embeddings won't result in much loss in representation power
+    Balance width and depth of network (increase them in parallel can have optimal improvement)
+  Auxiliary classifiers acts as regularizer
+  Label smoothing regularization (hard label -> soft label)
+  Gradient clipping is useful to stabilize training
+Concepts: LSR, Inception-v2, Inception-v3
+To read:
+  K. Simonyan and A. Zisserman. Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556, 2014.(VGGNet)
+  T. Tieleman and G. Hinton. Divide the gradient by a running average of its recent magnitude. COURSERA: Neural Networks for Machine Learning, 4, 2012. Accessed: 2015- 11-05. (RMSProp)
+  R. Pascanu, T. Mikolov, and Y. Bengio. On the difficulty of training recurrent neural networks. arXiv preprint arXiv:1211.5063, 2012. (gradient clipping)
+SecretKey: encourge to be less confident (hard decision -> soft decision)
+```
 ### [DenseNet](CNN/DenseNet.pdf)
 ```
 Densely Connected Convolutional Networks
@@ -238,7 +265,7 @@ Thoughts:
   Reserve images distribution
 Concepts: adversarial nets, generative model, discriminative model, Helvetica scenario (G maps too many noise input to the same output)
 To read:
-  Jarrett,K.,Kavukcuoglu,K.,Ranzato,M.,andLeCun,Y.(2009).Whatisthebestmulti-stagearchitecture for object recognition? In Proc. International Conference on Computer Vision (ICCV’09), pages 2146–2153. IEEE. (piecewise linear unit)
+  Jarrett, K., Kavukcuoglu, K., Ranzato, M., and LeCun, Y. (2009). What is the best multi-stage architecture for object recognition? In Proc. International Conference on Computer Vision (ICCV’09), pages 2146–2153. IEEE. (piecewise linear unit)
   Glorot, X., Bordes, A., and Bengio, Y. (2011). Deep sparse rectifier neural networks. In AISTATS’2011. (piecewise linear unit)
   Goodfellow, I. J., Warde-Farley, D., Mirza, M., Courville, A., and Bengio, Y. (2013a). Maxout networks. In ICML’2013. (piecewise linear unit)
   Hinton, G. E., Srivastava, N., Krizhevsky, A., Sutskever, I., and Salakhutdinov, R. (2012b). Improving neural networks by preventing co-adaptation of feature detectors. Technical report, arXiv:1207.0580. (dropout)
