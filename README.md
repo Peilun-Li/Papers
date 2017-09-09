@@ -13,6 +13,7 @@
   * [Batch Normalization](#batch-normalization)
   * [CRN](#crn)
   * [Inception](#inception)
+  * [Inception v2 & v3](#inception-v2--v3)
   * [DenseNet](#densenet)
   * [FCN-SemanticSeg](#fcn-semanticseg)
 - [RNN](#rnn)
