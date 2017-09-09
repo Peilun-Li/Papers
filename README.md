@@ -14,6 +14,7 @@
   * [CRN](#crn)
   * [Inception](#inception)
   * [Inception v2 & v3](#inception-v2--v3)
+  * [ResNet](#resnet)
   * [DenseNet](#densenet)
   * [FCN-SemanticSeg](#fcn-semanticseg)
 - [RNN](#rnn)
@@ -194,6 +195,16 @@ To read:
   T. Tieleman and G. Hinton. Divide the gradient by a running average of its recent magnitude. COURSERA: Neural Networks for Machine Learning, 4, 2012. Accessed: 2015- 11-05. (RMSProp)
   R. Pascanu, T. Mikolov, and Y. Bengio. On the difficulty of training recurrent neural networks. arXiv preprint arXiv:1211.5063, 2012. (gradient clipping)
 SecretKey: encourge to be less confident (hard decision -> soft decision)
+```
+### [ResNet](CNN/ResNet.pdf)
+```
+Deep Residual Learning for Image Recognition
+Kaiming He, CVPR 2016
+Workflow:
+  Shorcut connections
+Thoughts:
+  Identity map via shortcut (add)
+Concepts: deep residual learning
 ```
 ### [DenseNet](CNN/DenseNet.pdf)
 ```
