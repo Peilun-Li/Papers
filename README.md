@@ -18,6 +18,7 @@
   * [DenseNet](#densenet)
   * [FCN-SemanticSeg](#fcn-semanticseg)
 - [RNN](#rnn)
+  * [Sequence to Sequence](#sequence-to-sequence)
 - [GAN](#gan)
   * [GAN](#gan-1)
   * [Improved GAN](#improved-gan)
@@ -36,7 +37,7 @@
 ### [RCNN](CNN/RCNN.pdf)
 ```
 Rich feature hierarchies for accurate object detection and semantic segmentation
-Ross Girshick, CVPR 2014
+Ross Girshick, Berkeley, CVPR 2014
 Workflow: Selective search for region proposals -> AlexNet top layer features -> SVM classification
 Thoughts: Transfer learning from ImageNet, visualization, bias on positive samples
 Concepts: Feature map, receptive field
@@ -50,7 +51,7 @@ To read:
 ### [SPP-net](CNN/SPPnets.pdf)
 ```
 Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition
-Kaiming He, TPAMI 2015
+Kaiming He, Microsoft, TPAMI 2015
 Workflow:
   Generate fixed-length representation regardless of image size/scale
     SPP layer between C and FC to allow inputting different image sizes
@@ -62,7 +63,7 @@ SecretKey: CNN requires fixed input size (RNN?)
 ### [Fast R-CNN](CNN/FastRCNN.pdf)
 ```
 Fast R-CNN
-Ross Girshick, ICCV 2015
+Ross Girshick, Microsoft,ICCV 2015
 Workflow:
   Network:
     Input image and set of object proposals
@@ -85,7 +86,7 @@ SecretKey: Experiments results verify concerns, loss function matters, end-to-en
 ### [Faster R-CNN](CNN/FasterRCNN.pdf)
 ```
 Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks
-Shaoqing Ren
+Shaoqing Ren, Microsoft, NIPS 2015
 Workflow:
   Region Proposal Network
   Approximate joint training / Alternating training
@@ -96,7 +97,7 @@ Concepts: anchor
 ### [Batch Normalization](CNN/BatchNorm.pdf)
 ```
 Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift
-Sergey Ioffe, ICML 2015
+Sergey Ioffe, Google, ICML 2015
 Workflow:
   Normalize each scalar feature independently for each mini-batch, and
   Extra linear transformation which can represent identity transformation together with the normalization part
@@ -128,7 +129,7 @@ SecretKey: tranfer usage of normalization
 ### [CRN](CNN/CRN.pdf)
 ```
 Photographic Image Synthesis with Cascaded Refinement Networks
-Qifeng Chen, ICCV 2017
+Qifeng Chen, Stanford, ICCV 2017
 Workflow: 
   An end-to-end CNN to generate synthetic images from semantic layouts
     Progress refinement: start from small images, multiple CNN modules to upsample
@@ -152,7 +153,7 @@ SecretKey: content representation for annotation
 ### [Inception](CNN/Inception.pdf)
 ```
 Going Deeper with Convolutions
-Christian Szegedy, CVPR 2015
+Christian Szegedy, Google, CVPR 2015
 Workflow:
   Inception models:
     Parallel & Concat filters: 1x1 conv, 1x1 & 3x3 conv, 1x1 & 5x5 conv, 3x3 maxpool & 1x1 conv
@@ -172,7 +173,7 @@ SecretKey: dense<->sparse
 ### [Inception v2 & v3](CNN/Inception-v2v3.pdf)
 ```
 Rethinking the Inception Architecture for Computer Vision
-Christian Szegedy, CVPR 2016
+Christian Szegedy, Google, CVPR 2016
 Workflow:
   Inception-v2:
     Replace 5x5, 7x7 conv with multi-layer 3x3 conv (holding same input & output shape)
@@ -199,7 +200,7 @@ SecretKey: encourge to be less confident (hard decision -> soft decision)
 ### [ResNet](CNN/ResNet.pdf)
 ```
 Deep Residual Learning for Image Recognition
-Kaiming He, CVPR 2016
+Kaiming He, Microsoft, CVPR 2016
 Workflow:
   Shorcut connections
 Thoughts:
@@ -209,7 +210,7 @@ Concepts: deep residual learning
 ### [DenseNet](CNN/DenseNet.pdf)
 ```
 Densely Connected Convolutional Networks
-Gao Huang, Zhuang Liu, CVPR 2017
+Gao Huang, Zhuang Liu, Cornell, CVPR 2017
 Workflow:
   DenseNet: connect each layer to every other layer in a dense block
     Layers can be narrow (small number of filters per layer), forming a collective knowledge
@@ -238,7 +239,7 @@ SecretKey: ResNet<->RNN
 ### [FCN-SemanticSeg](CNN/FCN-SemanticSeg.pdf)
 ```
 Fully Convolutional Networks for Semantic Segmentation
-Jonathan Long, Evan Shelhamer, CVPR 2015
+Jonathan Long, Evan Shelhamer, Berkeley, CVPR 2015
 Workflow:
   Fully convolutional neural network for semantic segmentation:
     Transfer learning from ImageNet
@@ -260,12 +261,40 @@ To read:
 SecretKey: complicated NN is still simpler than hand crafted rules (adding edges/links may be closer to brain); knowledge can be widely applied (SemanticSeg & Detection)
 ```
 ## RNN
-
+### [Sequence to Sequence](RNN/seq2seq.pdf)
+```
+Sequence to Sequence Learning with Neural Networks
+Ilya Sutskever, Google, NIPS 2014
+Workflow:
+  Tow deep LSTM: 
+    input sequence -> vector with fixed dimension
+    vector -> decode output sequence
+  Deep LSTM outperforms shallow LSTM
+  Reverse order of input sequence
+  Decode: left-to-right beam search decoder
+Thoughts:
+  DNN can only handle fixed dimension -> LSTM map var length seq to fixed vector
+  Reverse input seq order to introduce short term dependencies that makes optimization simpler
+  LSTM tends to no suffer from gradient vanishment, but can have gradient explosion: enforce hard constraint on gradient norm
+Concepts: BLEU score, beam-search decoder
+To read:
+  S. Hochreiter and J. Schmidhuber. Long short-term memory. Neural Computation, 1997. (LSTM)
+  D. Rumelhart, G. E. Hinton, and R. J. Williams. Learning representations by back-propagating errors. Nature, 323(6088):533–536, 1986. (RNN)
+  T. Mikolov, M. Karafia ́t, L. Burget, J. Cernocky`, and S. Khudanpur. Recurrent neural network based language model. In INTERSPEECH, pages 1045–1048, 2010. (RNN)
+  M. Sundermeyer, R. Schluter, and H. Ney. LSTM neural networks for language modeling. In INTERSPEECH, 2010. (RNN)
+  A. Graves. Generating sequences with recurrent neural networks. In Arxiv preprint arXiv:1308.0850, 2013. (Attention, LSTM formulation)
+  D.Bahdanau, K.Cho, and Y.Bengio. Neural machine translation by jointly learning to align and translate. arXiv preprint arXiv:1409.0473, 2014. (Attention)
+  P. Werbos. Backpropagation through time: what it does and how to do it. Proceedings of IEEE, 1990. (RNN)
+  D. Rumelhart, G. E. Hinton, and R. J. Williams. Learning representations by back-propagating errors. Nature, 323(6088):533–536, 1986. (RNN)
+  S. Hochreiter and J. Schmidhuber. LSTM can solve hard long time lag problems. 1997. (Minimal time lag)
+SecretKey: TWO lstm(GAN?), var length sequence
+Pending: input & output details
+```
 ## GAN
 ### [GAN](GAN/GAN.pdf)
 ```
 Generative Adversarial Nets
-Ian J. Goodfellow, NIPS 2014
+Ian J. Goodfellow, Montreal, NIPS 2014
 Workflow: 
   Training generator and discriminator alternatively using sgd and bp (with different step)
   Both G and D will be improved through training
@@ -286,7 +315,7 @@ To read:
 ### [Improved GAN](GAN/improved-GAN.pdf)
 ```
 Improved Techniques for Training GANs
-Tim Salimans
+Tim Salimans, openai, NIPS 2016
 Workflow:
   Feature matching: matching G on activations of an intermediate layer of D
   Minibatch discrimination: An extra matrix (tensor) that produce extra side information of other examples in the minibatch by matrix (tensor) multiplication
@@ -305,7 +334,7 @@ SecretKey: GAN from game theory
 ### [DCGAN](GAN/DCGAN.pdf)
 ```
 Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks
-Alec Radford & Luke Metz, ICLR 2016
+Alec Radford & Luke Metz, indico Research, ICLR 2016
 Workflow:
   Model architectures that enable stable training, higher resolution and deeper generative models
     All convolutional net (replace spatial pooling with strided convolutions)
@@ -333,7 +362,7 @@ SecretKey: reversed face embedding <-> visualization on GAN
 ### [SimGAN](GAN/SimGAN.pdf)
 ```
 Learning from Simulated and Unsupervised Images through Adversarial Training
-Ashish Shrivastava, CVPR 2017
+Ashish Shrivastava, Apple, CVPR 2017
 Workflow: 
   A standard GAN with
     Self-regularization term (to preserve annotation)
@@ -355,7 +384,7 @@ SecretKey: moving average, Img2Vec
 ### [pix2pix](GAN/pix2pix.pdf)
 ```
 Image-to-Image Translation with Conditional Adversarial Networks
-Phillip Isola, CVPR 2017
+Phillip Isola, Berkeley, CVPR 2017
 Workflow:
   Generator: a encoder-decoder network with skip connections (U-Net)
   Conditional GAN (input image and random noise)
@@ -365,7 +394,7 @@ Thoughts:
 ### [CycleGAN](GAN/CycleGAN.pdf)
 ```
 Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks
-Jun-Yan Zhu, Taesung Park, ICCV 2017 (submitted)
+Jun-Yan Zhu, Taesung Park, Berkeley, ICCV 2017 (submitted)
 Workflow:
   Two G and two D form a cycle
   A cycle consistency loss
@@ -385,7 +414,7 @@ SecretKey: autoencoders reuse, identity mapping (resnet)
 ### [GTAV](other_ML/GTAV.pdf)
 ```
 Driving in the Matrix: Can Virtual Worlds Replace Human-Generated Annotations for Real World Tasks?
-Matthew Johnson-Roberson, ICRA 2017
+Matthew Johnson-Roberson, UMich, ICRA 2017
 Workflow:
   Collect simulated data and annotation from GTA V
   Transfer learning from ImageNet pretrained VGG16 using only simulated data
@@ -397,7 +426,7 @@ Concepts: depth buffer, stencil buffer
 ### [Playing for Data](other_ML/PlayingForData.pdf)
 ```
 Playing for Data: Ground Truth from Computer Games
-Stephan R. Richter, Vibhav Vineet, ECCV 2016
+Stephan R. Richter, Vibhav Vineet, TU Darmstadt & Intel, ECCV 2016
 Workflow:
   Collect image and segmentation data from GTA V
   Mixing training segmentation model with virtual data and real world data
