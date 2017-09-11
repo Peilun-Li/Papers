@@ -18,6 +18,7 @@
   * [DenseNet](#densenet)
   * [FCN-SemanticSeg](#fcn-semanticseg)
 - [RNN](#rnn)
+  * [BRNN](#brnn)
   * [Sequence to Sequence](#sequence-to-sequence)
 - [GAN](#gan)
   * [GAN](#gan-1)
@@ -261,6 +262,16 @@ To read:
 SecretKey: complicated NN is still simpler than hand crafted rules (adding edges/links may be closer to brain); knowledge can be widely applied (SemanticSeg & Detection)
 ```
 ## RNN
+### [BRNN](RNN/BRNN.pdf)
+```
+Bidirectional Recurrent Neural Networks
+Mike Schuster and Kuldip K. Paliwal, IEEE, IEEE TRANSACTIONS ON SIGNAL PROCESSING, 1997
+Workflow:
+  RNN with positive time direction and negative time direction
+    Forward states not connected to backward states (two hidden nodes)
+To read:
+  A. Waibel, T. Hanazawa, G. Hinton, K. Shikano, and K. J. Lang, “Phoneme recognition using time-delay neural networks,” IEEE Trans. Acoust., Speech, Signal Processing, vol. 37, pp. 328–339, Mar. 1989. (Time delay neural network)
+```
 ### [Sequence to Sequence](RNN/seq2seq.pdf)
 ```
 Sequence to Sequence Learning with Neural Networks
