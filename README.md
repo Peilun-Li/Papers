@@ -18,6 +18,7 @@
   * [DenseNet](#densenet)
   * [FCN-SemanticSeg](#fcn-semanticseg)
 - [RNN](#rnn)
+  * [RNN LM](#rnn-lm)
   * [BRNN](#brnn)
   * [Sequence to Sequence](#sequence-to-sequence)
 - [GAN](#gan)
@@ -262,6 +263,21 @@ To read:
 SecretKey: complicated NN is still simpler than hand crafted rules (adding edges/links may be closer to brain); knowledge can be widely applied (SemanticSeg & Detection)
 ```
 ## RNN
+### [RNN LM](RNN/RNNLM.pdf)
+```
+Recurrent neural network based language model
+Tomas Mikolov, Johns Hopkins, Interspeech 2010
+Workflow:
+  Vanilla RNN
+    Initial state set to vector of small values, e.g., 0.1
+    Decrease learning rate if log-likelihood has no significant improvement
+  Dynamic RNN
+    Continue training during test phase
+  All rare words are treated equally, i.e., uniform dist. between rare words
+Thoughts:
+  Initialization is not crucial for large amount of data
+Concepts: dynamic model
+```
 ### [BRNN](RNN/BRNN.pdf)
 ```
 Bidirectional Recurrent Neural Networks
