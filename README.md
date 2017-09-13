@@ -17,6 +17,7 @@
   * [ResNet](#resnet)
   * [DenseNet](#densenet)
   * [FCN-SemanticSeg](#fcn-semanticseg)
+  * [Multi Task Domain Adaptation](#multi-task-domain-adaptation)
 - [RNN](#rnn)
   * [RNN LM](#rnn-lm)
   * [BRNN](#brnn)
@@ -261,6 +262,23 @@ To read:
   M. D. Zeiler and R. Fergus. Visualizing and understanding convolutional networks. In Computer Vision–ECCV 2014, pages 818–833. Springer, 2014. (transfer learning)
   A. Giusti, D. C. Cires ̧an, J. Masci, L. M. Gambardella, and J. Schmidhuber. Fast image scanning with deep max-pooling convolutional neural networks. In ICIP, 2013. (fast scanning)
 SecretKey: complicated NN is still simpler than hand crafted rules (adding edges/links may be closer to brain); knowledge can be widely applied (SemanticSeg & Detection)
+```
+### [Multi Task Domain Adaptation](CNN/MultitaskDomAdapt.pdf)
+```
+Workflow:
+  Multi-task domain adaptation for fine-grained recoginition
+    Multi-task loss including: 
+      Softmax loss on fine-grained and attribute level
+      Attribute consistency loss
+      Unsup/Semisup adaptation loss
+    CaffeNet+ImageNet transfer
+Thoughts:
+  Convert class level loss to attribute level loss
+  Symmetric version of KL divergence to min distance b/w dist.
+To read:
+  S.Ben-David, J.Blitzer, K.Crammer, F.Pereira, etal. Analysis of representations for domain adaptation. Advances in neural information processing systems, 19:137, 2007. (theoretical framework for domain adaptation)
+  A. Krizhevsky, I. Sutskever, and G. E. Hinton. Imagenet classification with deep convolutional neural networks. In Advances in neural information processing systems, pages 1097–1105, 2012. (CNN architecture)
+  G. A. Miller. Wordnet: a lexical database for english. Com- munications of the ACM, 38(11):39–41, 1995. (WordNet)
 ```
 ## RNN
 ### [RNN LM](RNN/RNNLM.pdf)
