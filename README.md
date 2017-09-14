@@ -11,6 +11,7 @@
   * [Fast R-CNN](#fast-r-cnn)
   * [Faster R-CNN](#faster-r-cnn)
   * [Batch Normalization](#batch-normalization)
+  * [Deconv Network](#deconv-network)
   * [CRN](#crn)
   * [Inception](#inception)
   * [Inception v2 & v3](#inception-v2--v3)
@@ -128,6 +129,14 @@ To read:
   Sutskever, Ilya, Martens, James, Dahl, George E., and Hinton, Geoffrey E. On the importance of initialization and momentum in deep learning. In ICML (3), volume 28 of JMLR Proceedings, pp. 1139–1147. JMLR.org, 2013. (momentum)
   Duchi, John, Hazan, Elad, and Singer, Yoram. Adaptive subgradient methods for online learning and stochastic optimization. J.Mach. Learn. Res., 12:2121–2159,July 2011. ISSN 1532-4435. (adagrad)
 SecretKey: tranfer usage of normalization
+```
+### [Deconv Network](CNN/Deconv.pdf)
+See also "A giude to convolution arithmetic for deep learning" [here](CNN/ConvGuide.pdf)
+```
+Deconvolutional Networks
+Matthew D. Zeiler, NYU, CVPR 2010
+Workflow:
+  Top-down: reverse of conv
 ```
 ### [CRN](CNN/CRN.pdf)
 ```
