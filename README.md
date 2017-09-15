@@ -15,6 +15,7 @@
   * [CRN](#crn)
   * [Inception](#inception)
   * [Inception v2 & v3](#inception-v2--v3)
+  * [Inception v4](#inception-v4)
   * [ResNet](#resnet)
   * [DenseNet](#densenet)
   * [FCN-SemanticSeg](#fcn-semanticseg)
@@ -196,7 +197,7 @@ Thoughts:
   Architectural improvements in NN can improve performance
   General NN design principles:
     Representation size should decrease from input to the output
-    Increasing activations allos for more disentangled features
+    Increasing activations allows for more disentangled features
     Spatial aggregation in lower dimension embeddings won't result in much loss in representation power
     Balance width and depth of network (increase them in parallel can have optimal improvement)
   Auxiliary classifiers acts as regularizer
@@ -208,6 +209,15 @@ To read:
   T. Tieleman and G. Hinton. Divide the gradient by a running average of its recent magnitude. COURSERA: Neural Networks for Machine Learning, 4, 2012. Accessed: 2015- 11-05. (RMSProp)
   R. Pascanu, T. Mikolov, and Y. Bengio. On the difficulty of training recurrent neural networks. arXiv preprint arXiv:1211.5063, 2012. (gradient clipping)
 SecretKey: encourge to be less confident (hard decision -> soft decision)
+```
+### [Inception v4](CNN/Inception-v4.pdf)
+```
+Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning
+Christian Szegedy, Google, AAAI 2017
+Workflow:
+  Inception-v4: deeper and optimized version of inception v3
+  Inception-ResNet-v2: combine inception with resnet
+Concepts: Inception-v4, Inception-ResNet-v2
 ```
 ### [ResNet](CNN/ResNet.pdf)
 ```
