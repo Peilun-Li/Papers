@@ -11,6 +11,7 @@
   * [Fast R-CNN](#fast-r-cnn)
   * [Faster R-CNN](#faster-r-cnn)
   * [Batch Normalization](#batch-normalization)
+  * [Instance Normalization](#instance-normalization)
   * [Deconv Network](#deconv-network)
   * [CRN](#crn)
   * [Inception](#inception)
@@ -130,6 +131,17 @@ To read:
   Sutskever, Ilya, Martens, James, Dahl, George E., and Hinton, Geoffrey E. On the importance of initialization and momentum in deep learning. In ICML (3), volume 28 of JMLR Proceedings, pp. 1139–1147. JMLR.org, 2013. (momentum)
   Duchi, John, Hazan, Elad, and Singer, Yoram. Adaptive subgradient methods for online learning and stochastic optimization. J.Mach. Learn. Res., 12:2121–2159,July 2011. ISSN 1532-4435. (adagrad)
 SecretKey: tranfer usage of normalization
+```
+### [Instance Normalization](CNN/InstanceNorm.pdf)
+```
+Workflow:
+  Replace batch norm with instance norm (channel wise) to improve generative performance
+  Applied on both train and test phases
+Thoughts:
+  Style transfer results should be independent of the contrast of input image
+Concepts: instance normalization (a.k.a. contrast normalization)
+To read:
+  Ulyanov, D., Lebedev, V., Vedaldi, A., and Lempitsky, V. S. (2016). Texture networks: Feed-forward synthesis of textures and stylize images. In Proceedings of the 33nd International Conference on Machine Learning, ICML 2016, New York City, NY, USA, June 19-24, 2016, pages 1349–1357. (style transfer)
 ```
 ### [Deconv Network](CNN/Deconv.pdf)
 See also "A giude to convolution arithmetic for deep learning" [here](CNN/ConvGuide.pdf)
