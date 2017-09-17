@@ -287,7 +287,7 @@ To read:
   G. Csurka and F. Perronnin, “A simple high performance approach to semantic segmentation.” in BMVC, 2008, pp. 1–10. (BOV+SIFT)
   S.-C. Zhu, C.-E. Guo, Y. Wang, and Z. Xu, “What are textons?” International Journal of Computer Vision, vol. 62, no. 1-2, pp. 121–143, 2005. (texton)
   P. H. Pinheiro and R. Collobert, “Recurrent convolutional neural networks for scene parsing,” arXiv preprint arXiv:1306.2795, 2013. (recurrent CNN for SS)
-SecretKey:
+SecretKey: linked b/w ML and DL
 ```
 ### [FCN-SemanticSeg](CNN/FCN-SemanticSeg.pdf)
 ```
