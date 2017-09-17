@@ -19,6 +19,7 @@
   * [Inception v4](#inception-v4)
   * [ResNet](#resnet)
   * [DenseNet](#densenet)
+  * [Survey of Semantic Segmentation](#survey-of-semantic-segmentation)
   * [FCN-SemanticSeg](#fcn-semanticseg)
   * [Multi Task Domain Adaptation](#multi-task-domain-adaptation)
 - [RNN](#rnn)
@@ -269,6 +270,24 @@ To read:
   C.-Y.Lee,S.Xie,P.Gallagher,Z.Zhang,andZ.Tu.Deeply- supervised nets. In AISTATS, 2015. (deep supervision)
   G. Huang, Y. Sun, Z. Liu, D. Sedra, and K. Q. Weinberger. Deep networks with stochastic depth. (Stochastic depth regularization for resnet)
 SecretKey: ResNet<->RNN
+```
+### [Survey of Semantic Segmentation](CNN/Survey_SemanticSeg.pdf)
+```
+A Survey of Semantic Segmentation
+Martin Thoma
+Workflow:
+  SS is done typically with a classifier sliding on fixed-size feature inputs
+To read:
+  N. Dalal and B. Triggs, “Histograms of oriented gradients for human detection,” in Computer Vision and Pattern Recognition, 2005 (HOG)
+  L. Bourdev, S. Maji, T. Brox, and J. Malik, “Detecting people using mutually consistent poselet activations,” in Computer Vision–ECCV 2010. (HOG)
+  P. F. Felzenszwalb, R. B. Girshick, D. McAllester, and D. Ramanan, “Object detection with discriminatively trained part-based models,” Pattern Analysis and Machine Intelligence, IEEE Transactions on, vol. 32, no. 9, pp. 1627–1645, 2010. (HOG)
+  D. Lowe, “Distinctive image features from scale-invariant keypoints,” International Journal of Computer Vision, vol. 60, no. 2, pp. 91–110, 2004. (SIFT)
+  N. Plath, M. Toussaint, and S. Nakajima, “Multi- class image segmentation using conditional random fields and global classification,” in Proceedings of the 26th Annual International Conference on Machine Learning. ACM, 2009, pp. 817–824. (SIFT)
+  G. Csurka, C. Dance, L. Fan, J. Willamowski, and C. Bray, “Visual categorization with bags of keypoints,” in Workshop on statistical learning in computer vision, ECCV, vol. 1, no. 1-22. Prague, 2004, pp. 1–2. (BOV)
+  G. Csurka and F. Perronnin, “A simple high performance approach to semantic segmentation.” in BMVC, 2008, pp. 1–10. (BOV+SIFT)
+  S.-C. Zhu, C.-E. Guo, Y. Wang, and Z. Xu, “What are textons?” International Journal of Computer Vision, vol. 62, no. 1-2, pp. 121–143, 2005. (texton)
+  P. H. Pinheiro and R. Collobert, “Recurrent convolutional neural networks for scene parsing,” arXiv preprint arXiv:1306.2795, 2013. (recurrent CNN for SS)
+SecretKey:
 ```
 ### [FCN-SemanticSeg](CNN/FCN-SemanticSeg.pdf)
 ```
