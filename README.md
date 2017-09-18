@@ -37,6 +37,7 @@
 - [other ML](#other-ml)
   * [GTAV](#gtav)
   * [Playing for Data](#playing-for-data)
+  * [HOG](#hog)
 
 <!-- tocstop -->
 
@@ -287,7 +288,7 @@ To read:
   G. Csurka and F. Perronnin, “A simple high performance approach to semantic segmentation.” in BMVC, 2008, pp. 1–10. (BOV+SIFT)
   S.-C. Zhu, C.-E. Guo, Y. Wang, and Z. Xu, “What are textons?” International Journal of Computer Vision, vol. 62, no. 1-2, pp. 121–143, 2005. (texton)
   P. H. Pinheiro and R. Collobert, “Recurrent convolutional neural networks for scene parsing,” arXiv preprint arXiv:1306.2795, 2013. (recurrent CNN for SS)
-SecretKey: linked b/w ML and DL
+SecretKey: link b/w ML and DL
 ```
 ### [FCN-SemanticSeg](CNN/FCN-SemanticSeg.pdf)
 ```
@@ -526,4 +527,14 @@ Workflow:
   Collect image and segmentation data from GTA V
   Mixing training segmentation model with virtual data and real world data
 Concepts: detouring
+```
+### [HOG](other_ML/HOG.pdf)
+```
+Histograms of Oriented Gradients for Human Detection
+Navneet Dalal, CVPR 2015
+Workflow:
+  Histograms of oriented gradient
+Thoughts:
+  Local contrast normalization is essential for good performance
+Concepts: Histograms of Oriented Gradient (HOG)
 ```
