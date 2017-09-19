@@ -38,6 +38,7 @@
   * [GTAV](#gtav)
   * [Playing for Data](#playing-for-data)
   * [HOG](#hog)
+  * [SIFT](#sift)
 
 <!-- tocstop -->
 
@@ -531,10 +532,22 @@ Concepts: detouring
 ### [HOG](other_ML/HOG.pdf)
 ```
 Histograms of Oriented Gradients for Human Detection
-Navneet Dalal, CVPR 2015
+Navneet Dalal, CVPR 2005
 Workflow:
   Histograms of oriented gradient
 Thoughts:
   Local contrast normalization is essential for good performance
 Concepts: Histograms of Oriented Gradient (HOG)
+```
+### [SIFT](other_ML/SIFT.pdf)
+```
+Distinctive Image Features from Scale-Invariant Keypoints
+David G. Lowe, IJCV 2004
+Workflow:
+  Scale Invariant Feature Transform
+    Scale-space extrema detection
+    Keypoint localization
+    Orientation assignment
+    Keypoint descriptor
+Concepts: SIFT
 ```
