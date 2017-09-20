@@ -25,6 +25,7 @@
 - [RNN](#rnn)
   * [RNN LM](#rnn-lm)
   * [BRNN](#brnn)
+  * [deep RNN](#deep-rnn)
   * [Sequence to Sequence](#sequence-to-sequence)
 - [GAN](#gan)
   * [GAN](#gan-1)
@@ -357,6 +358,22 @@ Workflow:
     Forward states not connected to backward states (two hidden nodes)
 To read:
   A. Waibel, T. Hanazawa, G. Hinton, K. Shikano, and K. J. Lang, “Phoneme recognition using time-delay neural networks,” IEEE Trans. Acoust., Speech, Signal Processing, vol. 37, pp. 328–339, Mar. 1989. (Time delay neural network)
+```
+### [deep RNN](RNN/deepRNN.pdf)
+```
+Speech Recognition with Deep Recurrent Neural Networks
+Alex Graves (+Hinton), UToronto
+Workflow:
+  Deep RNNs: stacking hidden layer
+  Training: Connectionist Temporal Classification (CTC), RNN Transducer
+Thoughts:
+  Training methods can make some problem possible
+Concepts: deep RNN, deep LSTM, CTC
+To read:
+  A. Graves and J. Schmidhuber, “Framewise Phoneme Classification with Bidirectional LSTM and Other Neu- ral Network Architectures,” Neural Networks, vol. 18, no. 5-6, pp. 602–610, June/July 2005. (bidirectional LSTM)
+  A. Graves, S. Ferna ́ndez, F. Gomez, and J. Schmidhuber, “Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Net- works,” in ICML, Pittsburgh, USA, 2006. (CTC)
+  A. Graves, Supervised sequence labelling with recurrent neural networks, vol. 385, Springer, 2012. (CTC)
+  A. Graves, “Sequence transduction with recurrent neu- ral networks,” in ICML Representation Learning Work- sop, 2012. (RNN Transducer)
 ```
 ### [Sequence to Sequence](RNN/seq2seq.pdf)
 ```
