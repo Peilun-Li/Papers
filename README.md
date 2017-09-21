@@ -27,6 +27,7 @@
   * [BRNN](#brnn)
   * [deep RNN](#deep-rnn)
   * [Sequence to Sequence](#sequence-to-sequence)
+  * [Efficient Estimation (word2vec)](#efficient-estimation-word2vec)
 - [GAN](#gan)
   * [GAN](#gan-1)
   * [Improved GAN](#improved-gan)
@@ -403,6 +404,12 @@ To read:
   S. Hochreiter and J. Schmidhuber. LSTM can solve hard long time lag problems. 1997. (Minimal time lag)
 SecretKey: TWO lstm(GAN?), var length sequence
 Pending: input & output details
+```
+### [Efficient Estimation (word2vec)](RNN/efficient_est_word2vec.pdf)
+```
+Workflow:
+  CBOW (continuous BOW): predicting the word given its context
+  Skip-gram: predicting the context given a word
 ```
 ## GAN
 ### [GAN](GAN/GAN.pdf)
