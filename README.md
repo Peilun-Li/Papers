@@ -28,6 +28,7 @@
   * [deep RNN](#deep-rnn)
   * [Sequence to Sequence](#sequence-to-sequence)
   * [Efficient Estimation (word2vec)](#efficient-estimation-word2vec)
+  * [Distributed Representations (word2vec)](#distributed-representations-word2vec)
 - [GAN](#gan)
   * [GAN](#gan-1)
   * [Improved GAN](#improved-gan)
@@ -407,9 +408,20 @@ Pending: input & output details
 ```
 ### [Efficient Estimation (word2vec)](RNN/efficient_est_word2vec.pdf)
 ```
+Distributed Representations ofWords and Phrases and their Compositionality
+Tomas Mikolov, Google, NIPS 2013
 Workflow:
   CBOW (continuous BOW): predicting the word given its context
   Skip-gram: predicting the context given a word
+```
+### [Distributed Representations (word2vec)](RNN/distributed_rep_word2vec.pdf)
+```
+Distributed Representations of Words and Phrases and their Compositionality
+Tomas Mikolov, Google, NIPS 2013
+Workflow:
+  Hierarchical softmax: O(n) to O(logn)
+  Noise Contrastive Estimation (NCE) -> Negative sampling (NEG): max log prob. of softmax
+  Subsampling of frequent words: frequent words have less information value than rare words
 ```
 ## GAN
 ### [GAN](GAN/GAN.pdf)
