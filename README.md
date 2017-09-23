@@ -42,6 +42,8 @@
   * [Playing for Data](#playing-for-data)
   * [HOG](#hog)
   * [SIFT](#sift)
+- [Slides](#slides)
+  * [MT with RNN CS224d-L9](#mt-with-rnn-cs224d-l9)
 
 <!-- tocstop -->
 
@@ -586,4 +588,15 @@ Workflow:
     Orientation assignment
     Keypoint descriptor
 Concepts: SIFT
+```
+
+## Slides
+### [MT with RNN CS224d-L9](Slides/CS224d-Lecture9.pdf)
+```
+Workflow:
+  Encoder outputs a final hidden vector
+  Decoder's hidden state is computed by a function of:
+    Previous hidden state
+    Encoder's final output hidden vector
+    Previous predicted output word
 ```
