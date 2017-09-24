@@ -43,6 +43,7 @@
   * [HOG](#hog)
   * [SIFT](#sift)
 - [Slides](#slides)
+  * [Word Vec CS224d-L2](#word-vec-cs224d-l2)
   * [MT with RNN CS224d-L9](#mt-with-rnn-cs224d-l9)
 
 <!-- tocstop -->
@@ -591,6 +592,20 @@ Concepts: SIFT
 ```
 
 ## Slides
+### [Word Vec CS224d-L2](Slides/CS224d-Lecture2.pdf)
+```
+Workflow:
+  Word to Vector:
+    Window based cooccurence matrix as vectors + SVD
+    Word2Vec: skip-gram model with max log prob opt.
+      Each word has two vectors (outside and center vectors)
+      Approx. with negative sampling
+    GloVe: combine count based (cooccur. matrix) and direct prediction (word2vec)
+Thoughts:
+  Neighbors can represent words
+To read: 
+  GloVe: Global Vectors for Word Representation
+```
 ### [MT with RNN CS224d-L9](Slides/CS224d-Lecture9.pdf)
 ```
 Workflow:
