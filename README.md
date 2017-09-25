@@ -44,6 +44,7 @@
   * [SIFT](#sift)
 - [Slides](#slides)
   * [Word Vec CS224d-L2](#word-vec-cs224d-l2)
+  * [Word Vec more CS224d-L3](#word-vec-more-cs224d-l3)
   * [MT with RNN CS224d-L9](#mt-with-rnn-cs224d-l9)
 
 <!-- tocstop -->
@@ -605,6 +606,17 @@ Thoughts:
   Neighbors can represent words
 To read: 
   GloVe: Global Vectors for Word Representation
+```
+### [Word Vec more CS224d-L3](Slides/CS224d-Lecture3.pdf)
+```
+Workflow:
+  Word2Vec:
+    Skip-gram: Approx w/ binary LR b/w true pairs and random pairs (dist.)
+    CBOW: predict center word from sum of surrounding word vectors
+    Word2Vec: sum of center vector and outside vector
+  Evaluation:
+    Intrinsic: e.g., argmax cos dist. -> semantic and syntactic analogy questions
+    Extrinsic: e.g., named entity recognition
 ```
 ### [MT with RNN CS224d-L9](Slides/CS224d-Lecture9.pdf)
 ```
