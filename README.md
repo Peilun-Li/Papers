@@ -46,6 +46,7 @@
   * [Word Vec CS224d-L2](#word-vec-cs224d-l2)
   * [Word Vec more CS224d-L3](#word-vec-more-cs224d-l3)
   * [MT with RNN CS224d-L9](#mt-with-rnn-cs224d-l9)
+  * [Deep LSTM CS224d-L10](#deep-lstm-cs224d-l10)
 
 <!-- tocstop -->
 
@@ -626,4 +627,10 @@ Workflow:
     Previous hidden state
     Encoder's final output hidden vector
     Previous predicted output word
+```
+### [Deep LSTM CS224d-L10](Slides/CS224d-Lecture10.pdf)
+```
+Workflow:
+  Deep LSTM
+  Recursive NN vs. Recurrent NN
 ```
