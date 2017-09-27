@@ -47,6 +47,7 @@
   * [Word Vec more CS224d-L3](#word-vec-more-cs224d-l3)
   * [MT with RNN CS224d-L9](#mt-with-rnn-cs224d-l9)
   * [Deep LSTM CS224d-L10](#deep-lstm-cs224d-l10)
+  * [Advanced Recursive NN CS224d-L11](#advanced-recursive-nn-cs224d-l11)
 
 <!-- tocstop -->
 
@@ -633,4 +634,12 @@ Workflow:
 Workflow:
   Deep LSTM
   Recursive NN vs. Recurrent NN
+```
+### [Advanced Recursive NN CS224d-L11](Slides/CS224d-Lecture11.pdf)
+```
+Workflow:
+  Recursive NN for:
+    Phrase detection
+    Sentiment detection
+  Tree LSTM
 ```
