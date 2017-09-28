@@ -48,6 +48,7 @@
   * [MT with RNN CS224d-L9](#mt-with-rnn-cs224d-l9)
   * [Deep LSTM CS224d-L10](#deep-lstm-cs224d-l10)
   * [Advanced Recursive NN CS224d-L11](#advanced-recursive-nn-cs224d-l11)
+  * [CNN for NLP CS224d-L13](#cnn-for-nlp-cs224d-l13)
 
 <!-- tocstop -->
 
@@ -642,4 +643,14 @@ Workflow:
     Phrase detection
     Sentiment detection
   Tree LSTM
+```
+### [CNN for NLP CS224d-L13](Slides/CS224d-Lecture13.pdf)
+```
+Workflow:
+  Each filter focuses on a different n-gram
+    Input n word vectors (concatenated), output a vector
+  Max-over-time pooling
+    Max a (scalar) activation for each vector
+  Dropout & Softmax
+Thoughts: CNN is similar as Recursive NN
 ```
