@@ -49,6 +49,7 @@
   * [Deep LSTM CS224d-L10](#deep-lstm-cs224d-l10)
   * [Advanced Recursive NN CS224d-L11](#advanced-recursive-nn-cs224d-l11)
   * [CNN for NLP CS224d-L13](#cnn-for-nlp-cs224d-l13)
+  * [NN in SR CS224d-L14](#nn-in-sr-cs224d-l14)
 
 <!-- tocstop -->
 
@@ -653,4 +654,11 @@ Workflow:
     Max a (scalar) activation for each vector
   Dropout & Softmax
 Thoughts: CNN is similar as Recursive NN
+```
+### [NN in SR CS224d-L14](Slides/CS224d-Lecture14.pdf)
+```
+Workflow:
+  NN in speech recognition:
+    HMM-DNN
+    CTC objective function
 ```
