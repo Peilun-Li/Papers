@@ -50,6 +50,7 @@
   * [Advanced Recursive NN CS224d-L11](#advanced-recursive-nn-cs224d-l11)
   * [CNN for NLP CS224d-L13](#cnn-for-nlp-cs224d-l13)
   * [NN in SR CS224d-L14](#nn-in-sr-cs224d-l14)
+  * [NMT CS224d-L15](#nmt-cs224d-l15)
 
 <!-- tocstop -->
 
@@ -661,4 +662,13 @@ Workflow:
   NN in speech recognition:
     HMM-DNN
     CTC objective function
+```
+### [NMT CS224d-L15](Slides/CS224d-Lecture15.pdf)
+```
+Workflow:
+  Seq2seq: details on forward & backward
+  Advancing NMT:
+    Vocabulary size: copy mechanism
+    Sentence length: attention mechanism
+    Language complexity (multi-word, informal spelling, etc.): character-level translation
 ```
