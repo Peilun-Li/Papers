@@ -51,6 +51,7 @@
   * [CNN for NLP CS224d-L13](#cnn-for-nlp-cs224d-l13)
   * [NN in SR CS224d-L14](#nn-in-sr-cs224d-l14)
   * [NMT CS224d-L15](#nmt-cs224d-l15)
+  * [DMN CS224d-L17](#dmn-cs224d-l17)
 
 <!-- tocstop -->
 
@@ -671,4 +672,17 @@ Workflow:
     Vocabulary size: copy mechanism
     Sentence length: attention mechanism
     Language complexity (multi-word, informal spelling, etc.): character-level translation
+```
+### [DMN CS224d-L17](Slides/CS224d-Lecture17.pdf)
+```
+Workflow:
+  Obstacles:
+    For NLP no single model architecture can have consistent good results across tasks
+    Fully joint multitask learning is hard
+Thoughts:
+  All NLP/AI tasks can be readuced to question answering
+Concepts: Dynamic Memory Networks (DMN)
+To read:
+  Ask Me Anything: Dynamic Memory Networks for Natural Language Processing (Kumar et al., 2015)
+  Dynamic Memory Networks for Visual and Textual Question Answering (Xiong et al., 2016)
 ```
