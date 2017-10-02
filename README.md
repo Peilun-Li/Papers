@@ -36,6 +36,7 @@
   * [SimGAN](#simgan)
   * [pix2pix](#pix2pix)
   * [CycleGAN](#cyclegan)
+  * [Wasserstein GAN](#wasserstein-gan)
 - [other NN](#other-nn)
 - [other ML](#other-ml)
   * [GTAV](#gtav)
@@ -550,6 +551,20 @@ Concepts: adversarial loss, cycle consistency loss
 To read:
   Many (unpaired image to image translation)
 SecretKey: autoencoders reuse, identity mapping (resnet)
+```
+### [Wasserstein GAN](GAN/WGAN.pdf)
+```
+Wasserstein GAN
+Martin Arjovsky
+Workflow:
+  Goal of unsup learning: min KL divergence b/w real data dist. and learned dist.
+  EM distance is continuous and differentiable
+  Optimized on EM distance, WGAN is more stable
+Thoughts:
+  Training GAN is delicate and unstable [To read 1]
+Concepts: Earth Mover(EM) distance, Wasserstein-GAN
+To read:
+  Martin Arjovsky and L ́eon Bottou. Towards principled methods for training generative adversarial networks. In International Conference on Learning Rep- resentations, 2017. Under review.
 ```
 ## other NN
 
