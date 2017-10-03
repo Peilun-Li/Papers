@@ -53,6 +53,7 @@
   * [NN in SR CS224d-L14](#nn-in-sr-cs224d-l14)
   * [NMT CS224d-L15](#nmt-cs224d-l15)
   * [DMN CS224d-L17](#dmn-cs224d-l17)
+  * [RL CS234-L1](#rl-cs234-l1)
 
 <!-- tocstop -->
 
@@ -700,4 +701,15 @@ Concepts: Dynamic Memory Networks (DMN)
 To read:
   Ask Me Anything: Dynamic Memory Networks for Natural Language Processing (Kumar et al., 2015)
   Dynamic Memory Networks for Visual and Textual Question Answering (Xiong et al., 2016)
+```
+### [RL CS234-L1](Slides/CS234-Lecture1.pdf)
+```
+Workflow:
+  RL: learn to make good sequences of decisions
+  RL involves:
+    Optimization
+    Generalization: policy maps past experience to action
+    Exploration
+    Delayed consequences
+  Markov decision process: <States, Actions, Reward model, T dynamics model, Y discount factor>
 ```
