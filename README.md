@@ -22,6 +22,7 @@
   * [Survey of Semantic Segmentation](#survey-of-semantic-segmentation)
   * [FCN-SemanticSeg](#fcn-semanticseg)
   * [Multi Task Domain Adaptation](#multi-task-domain-adaptation)
+  * [U-Net](#u-net)
 - [RNN](#rnn)
   * [RNN LM](#rnn-lm)
   * [BRNN](#brnn)
@@ -346,6 +347,17 @@ To read:
   S.Ben-David, J.Blitzer, K.Crammer, F.Pereira, etal. Analysis of representations for domain adaptation. Advances in neural information processing systems, 19:137, 2007. (theoretical framework for domain adaptation)
   A. Krizhevsky, I. Sutskever, and G. E. Hinton. Imagenet classification with deep convolutional neural networks. In Advances in neural information processing systems, pages 1097–1105, 2012. (CNN architecture)
   G. A. Miller. Wordnet: a lexical database for english. Com- munications of the ACM, 38(11):39–41, 1995. (WordNet)
+```
+### [U-Net](CNN/U-Net.pdf)
+```
+U-Net: Convolutional Networks for Biomedical Image Segmentation
+Olaf Ronneberger
+Workflow:
+  U-Net:
+    Contracting path to capture context
+    Symmetric expanding path for precise localization
+  Mirror input image for border prediction
+Concepts: overlap-tile strategy
 ```
 ## RNN
 ### [RNN LM](RNN/RNNLM.pdf)
