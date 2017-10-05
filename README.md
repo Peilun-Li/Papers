@@ -54,7 +54,8 @@
   * [NN in SR CS224d-L14](#nn-in-sr-cs224d-l14)
   * [NMT CS224d-L15](#nmt-cs224d-l15)
   * [DMN CS224d-L17](#dmn-cs224d-l17)
-  * [RL CS234-L1](#rl-cs234-l1)
+  * [MDP CS234-L1](#mdp-cs234-l1)
+  * [MDP to RL CS234-L2](#mdp-to-rl-cs234-l2)
 
 <!-- tocstop -->
 
@@ -714,7 +715,7 @@ To read:
   Ask Me Anything: Dynamic Memory Networks for Natural Language Processing (Kumar et al., 2015)
   Dynamic Memory Networks for Visual and Textual Question Answering (Xiong et al., 2016)
 ```
-### [RL CS234-L1](Slides/CS234-Lecture1.pdf)
+### [MDP CS234-L1](Slides/CS234-Lecture1.pdf)
 ```
 Workflow:
   RL: learn to make good sequences of decisions
@@ -724,4 +725,27 @@ Workflow:
     Exploration
     Delayed consequences
   Markov decision process: <States, Actions, Reward model, T dynamics model, Y discount factor>
+```
+### [MDP to RL CS234-L2](Slides/CS234-Lecture2.pdf)
+```
+Workflow:
+  Q(s, a) values:
+    Expected discounted sum of rewards over H step horizon
+    If start with action a and follow policy pi
+  MDP (Markov Decision Process):
+    Value Iteration(VI): iteration on Values
+    Policy Iteration(PI): iteration on Policy
+      Policy evaluation: calc V for all s
+      Policy improvement: find state-action Q value by following policy forever for each state s; take argmax of Q
+    PI takes fewer iterations but more expensive per iteration, VI the opposite
+  MDP vs. RL:
+    MDP: given model of stochastic outcomes
+    RL: learn model of outcomes
+  RL:
+    Model-based passive RL: estimate MDP model parameters from data (count & average)
+    Model-free passive RL: only maintain estimate of Q
+      TD (Temporal Difference) learning on V (running average)
+    Q-Learning:
+      Update Q(s, a) every time experience (s, a, s', r): running average on new sample estimate on s'
+      Expore vs. Exploit: E-greedy (like pagerank random jump) with decay over time
 ```
