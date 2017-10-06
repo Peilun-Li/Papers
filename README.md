@@ -44,6 +44,7 @@
   * [Playing for Data](#playing-for-data)
   * [HOG](#hog)
   * [SIFT](#sift)
+  * [DNDF](#dndf)
 - [Slides](#slides)
   * [Word Vec CS224d-L2](#word-vec-cs224d-l2)
   * [Word Vec more CS224d-L3](#word-vec-more-cs224d-l3)
@@ -626,7 +627,15 @@ Workflow:
     Keypoint descriptor
 Concepts: SIFT
 ```
-
+### [DNDF](other_ML/DeepNDF.pdf)
+```
+Deep Neural Decision Forests
+Peter Kontschieder, Microsoft Research, ICCV 2015
+Workflow:
+  Decision tree with stochastic routing
+  Replace fc layer with NDF
+Thoughts: deep learning & traditional machine learning
+```
 ## Slides
 ### [Word Vec CS224d-L2](Slides/CS224d-Lecture2.pdf)
 ```
