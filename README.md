@@ -581,6 +581,13 @@ Concepts: Earth Mover(EM) distance, Wasserstein-GAN
 To read:
   Martin Arjovsky and L ́eon Bottou. Towards principled methods for training generative adversarial networks. In International Conference on Learning Rep- resentations, 2017. Under review.
 ```
+### [CoGAN](GAN/CoGAN.pdf)
+```
+Workflow:
+  Learn joint distribution of multi-domain images without paired training data
+    By sharing weight: first layers of G, and last layers of D (A GAN for each domain)
+Thoughts: Paired images in two domains share the same high-level concepts
+```
 ## other NN
 
 ## other ML
