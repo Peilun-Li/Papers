@@ -121,6 +121,15 @@ Thoughts:
   Feature maps may be reused
 Concepts: anchor
 ```
+### [ImageNet CNN](ImageNet-CNN.pdf)
+```
+ImageNet Classification with Deep Convolutional Neural Networks
+Alex Krizhevsky, UToronto, NIPS 2012
+Workflow:
+  ReLU, Multi GPU, Local Response Normalization
+Thoughts:
+  ReLU trains faster than tanh and sigmoid
+```
 ### [Batch Normalization](CNN/BatchNorm.pdf)
 ```
 Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift
