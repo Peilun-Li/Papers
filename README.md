@@ -10,6 +10,7 @@
   * [SPP-net](#spp-net)
   * [Fast R-CNN](#fast-r-cnn)
   * [Faster R-CNN](#faster-r-cnn)
+  * [ImageNet CNN](#imagenet-cnn)
   * [Batch Normalization](#batch-normalization)
   * [Instance Normalization](#instance-normalization)
   * [Deconv Network](#deconv-network)
@@ -38,6 +39,8 @@
   * [pix2pix](#pix2pix)
   * [CycleGAN](#cyclegan)
   * [Wasserstein GAN](#wasserstein-gan)
+  * [CoGAN](#cogan)
+  * [Perceptual loss](#perceptual-loss)
 - [other NN](#other-nn)
 - [other ML](#other-ml)
   * [GTAV](#gtav)
@@ -57,6 +60,7 @@
   * [DMN CS224d-L17](#dmn-cs224d-l17)
   * [MDP CS234-L1](#mdp-cs234-l1)
   * [MDP to RL CS234-L2](#mdp-to-rl-cs234-l2)
+  * [Monte Carlo and Generalization CS234-L3](#monte-carlo-and-generalization-cs234-l3)
 
 <!-- tocstop -->
 
@@ -596,6 +600,17 @@ Workflow:
   Learn joint distribution of multi-domain images without paired training data
     By sharing weight: first layers of G, and last layers of D (A GAN for each domain)
 Thoughts: Paired images in two domains share the same high-level concepts
+```
+### [Perceptual loss](GAN/Perceptual-Loss.pdf)
+```
+Perceptual Losses for Real-Time Style Transfer and Super-Resolution
+Justin Johnson, Stanford, EVVC 2016
+Workflow:
+  Use perceptual loss for style transfer: high level features from a pretrained network
+    Feature reconstruction loss
+    Style reconstruction loss
+To read: 
+  Vondrick, C., Khosla, A., Malisiewicz, T., Torralba, A.: Hoggles: Visualizing ob- ject detection features. In: Proceedings of the IEEE International Conference on Computer Vision. (2013) 1–8 (HOG loss)
 ```
 ## other NN
 
