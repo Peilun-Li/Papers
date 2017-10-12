@@ -48,6 +48,7 @@
   * [HOG](#hog)
   * [SIFT](#sift)
   * [DNDF](#dndf)
+  * [Selective Search](#selective-search)
 - [Slides](#slides)
   * [Word Vec CS224d-L2](#word-vec-cs224d-l2)
   * [Word Vec more CS224d-L3](#word-vec-more-cs224d-l3)
@@ -666,6 +667,16 @@ Workflow:
   Decision tree with stochastic routing
   Replace fc layer with NDF
 Thoughts: deep learning & traditional machine learning
+```
+### [Selective Search](Other_ML/Selective-Search.pdf)
+```
+Selective Search for Object Recognition
+J.R.R. Uijlings, IJCV 2013
+Workflow:
+  Combine:
+    Exhaustive search: capture all possible locations
+    Segmentation: use image structure information
+  Diversification: color spaces, similarity measures, starting regions
 ```
 ## Slides
 ### [Word Vec CS224d-L2](Slides/CS224d-Lecture2.pdf)
