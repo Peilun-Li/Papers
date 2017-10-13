@@ -62,6 +62,7 @@
   * [MDP CS234-L1](#mdp-cs234-l1)
   * [MDP to RL CS234-L2](#mdp-to-rl-cs234-l2)
   * [Monte Carlo and Generalization CS234-L3](#monte-carlo-and-generalization-cs234-l3)
+  * [Model Free Methods and Approximation](#model-free-methods-and-approximation)
 
 <!-- tocstop -->
 
@@ -800,11 +801,17 @@ Workflow:
       Update Q(s, a) every time experience (s, a, s', r): running average on new sample estimate on s'
       Expore vs. Exploit: E-greedy (like pagerank random jump) with decay over time
 ```
-### [Monte Carlo and Generalization CS234-L3](CS234-Lecture3.pdf)
+### [Monte Carlo and Generalization CS234-L3](Slides/CS234-Lecture3.pdf)
 ```
 Workflow:
   Monte Carlo policy evaluation: uses empirica mean returen instead of expected return
   Incremental Monte Carlo Updates
   Value function approximation (VFA): replace value lookup table with general parameterized form, to scale to large state spaces
   Action-value function approximation
+```
+### [Model Free Methods and Approximation](Slides/CS234-Lecture4.pdf)
+```
+  Feature selection:
+    Domain knowledge
+    Flexible set of features & regularize
 ```
