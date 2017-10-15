@@ -679,6 +679,17 @@ Workflow:
     Segmentation: use image structure information
   Diversification: color spaces, similarity measures, starting regions
 ```
+### [LM evaluation](Other_ML/LM-evaluation.pdf)
+```
+Evaluation Metrics for Language Models
+Stanley Chen, Douglas Beeferman, Ronald Rosenfeld, CMU
+Workflow:
+  Perplexity of a language model: inverse of geometric avg on test data
+  Word-error rate: e.g., on speech recognition
+Thoughts:
+  Expected word accuracy / Word error rate is (near) linear with LOG perplexity
+SecretKey: log-linear
+```
 ## Slides
 ### [Word Vec CS224d-L2](Slides/CS224d-Lecture2.pdf)
 ```
