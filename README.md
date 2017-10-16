@@ -615,7 +615,16 @@ To read:
   Vondrick, C., Khosla, A., Malisiewicz, T., Torralba, A.: Hoggles: Visualizing ob- ject detection features. In: Proceedings of the IEEE International Conference on Computer Vision. (2013) 1–8 (HOG loss)
 ```
 ## other NN
-
+### [Neural Style](other_NN/Neural-Style.pdf)
+```
+A Neural Algorithm of Artistic Style
+Leon A. Gatys
+Workflow:
+  Learn a image that fits representations of style image and content image
+    Square error loss on multilayer's feature maps (extra Gram matrix for style representation loss)
+    Jointly minimize content loss and style loss, from a white image and pretrained VGG-19
+Thoughts: min feature level loss
+```
 ## other ML
 ### [GTAV](other_ML/GTAV.pdf)
 ```
