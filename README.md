@@ -46,6 +46,7 @@
 - [other ML](#other-ml)
   * [GTAV](#gtav)
   * [Playing for Data](#playing-for-data)
+  * [Playing for Benchmarks](#playing-for-benchmarks)
   * [HOG](#hog)
   * [SIFT](#sift)
   * [DNDF](#dndf)
@@ -648,6 +649,13 @@ Workflow:
   Collect image and segmentation data from GTA V
   Mixing training segmentation model with virtual data and real world data
 Concepts: detouring
+```
+### [Playing for Benchmarks](other_ML/PlayingForBenchmarks.pdf)
+```
+Playing for Benchmarks
+Stephan R. Richter
+Workflow:
+  250K high-resolution video frames from GTA V using real-time rendering pipelines
 ```
 ### [HOG](other_ML/HOG.pdf)
 ```
