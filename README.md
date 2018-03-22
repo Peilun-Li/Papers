@@ -631,7 +631,7 @@ Workflow:
 Thoughts: min feature level loss
 ```
 ## OCR (Document Understanding)
-### [Full page text recognition](OCR/Full-Page-Text-Recognition)
+### [Full page text recognition](OCR/Full-Page-Text-Recognition.pdf)
 ```
 Full-Page Text Recognition: Learning Where to Start and When to Stop
 Bastien Moysset
