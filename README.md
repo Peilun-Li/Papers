@@ -43,6 +43,8 @@
   * [Perceptual loss](#perceptual-loss)
 - [other NN](#other-nn)
   * [Neural Style](#neural-style)
+- [OCR (Document Understanding)](#ocr-document-understanding)
+  * [Full page text recognition](#full-page-text-recognition)
 - [other ML](#other-ml)
   * [GTAV](#gtav)
   * [Playing for Data](#playing-for-data)
@@ -497,7 +499,7 @@ Workflow:
   Feature matching: matching G on activations of an intermediate layer of D
   Minibatch discrimination: An extra matrix (tensor) that produce extra side information of other examples in the minibatch by matrix (tensor) multiplication
   Historical averaging
-  One-sided label smooting
+  One-sided label smoothing
   Vitual batch normalization: normalize based on a reference batch
 Thoughts:
   Game theory: training GANs require finding a Nash equilibrium of a non-convex game
@@ -505,7 +507,7 @@ Thoughts:
 Concepts: Nash equilibrium, virtual batch normalization
 To read:
   AlecRadford, Luke Metz, and Soumith Chintala. Unsupervised representation learning with deep convolutional generative adversarial networks. arXiv preprint arXiv:1511.06434, 2015. (DCGAN)
-  C. Szegedy, V. Vanhoucke, S. Ioffe, J. Shlens, and Z. Wojna. Rethinking the Inception Architecture for Computer Vision. ArXiv e-prints, December 2015. (label smooting)
+  C. Szegedy, V. Vanhoucke, S. Ioffe, J. Shlens, and Z. Wojna. Rethinking the Inception Architecture for Computer Vision. ArXiv e-prints, December 2015. (label smoothing)
 SecretKey: GAN from game theory
 ```
 ### [DCGAN](GAN/DCGAN.pdf)
@@ -627,6 +629,21 @@ Workflow:
     Square error loss on multilayer's feature maps (extra Gram matrix for style representation loss)
     Jointly minimize content loss and style loss, from a white image and pretrained VGG-19
 Thoughts: min feature level loss
+```
+## OCR (Document Understanding)
+### [Full page text recognition](OCR/Full-Page-Text-Recognition)
+```
+Full-Page Text Recognition: Learning Where to Start and When to Stop
+Bastien Moysset
+Workflow:
+  Localization step: detect start of text lines
+  Recognization step: recognize and find where to stop
+Concepts: 2D-LSTM, Convolutional RNN
+To read:
+  Bluche, T.: Joint line segmentation and transcription for end-to-end handwritten paragraph recognition. In: Advances in Neural Information Processing System (2016) (Attention mechanism w/o localization)
+  Graves, A., Schmidhuber, J.: Offline handwriting recognition with mul- tidimensional recurrent neural networks. In: NIPS (2009) (2D-LSTM)
+  Moysset, B., Kermorvant, C., Wolf, C.: Learning to detect and localize many objects from few examples. arXiv preprint arXiv:1611.05664 (2016) (CRNN)
+  Erhan, D., Szegedy, C., Toshev, A., Anguelov, D.: Scalable object detection using deep neural networks. In: IEEE Conf. on Computer Vision and Pattern Recognition (2014) (training)
 ```
 ## other ML
 ### [GTAV](other_ML/GTAV.pdf)
