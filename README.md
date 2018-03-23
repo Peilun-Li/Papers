@@ -705,7 +705,7 @@ Workflow:
   Replace fc layer with NDF
 Thoughts: deep learning & traditional machine learning
 ```
-### [Selective Search](Other_ML/Selective-Search.pdf)
+### [Selective Search](other_ML/Selective-Search.pdf)
 ```
 Selective Search for Object Recognition
 J.R.R. Uijlings, IJCV 2013
@@ -715,7 +715,7 @@ Workflow:
     Segmentation: use image structure information
   Diversification: color spaces, similarity measures, starting regions
 ```
-### [LM evaluation](Other_ML/LM-evaluation.pdf)
+### [LM evaluation](other_ML/LM-evaluation.pdf)
 ```
 Evaluation Metrics for Language Models
 Stanley Chen, Douglas Beeferman, Ronald Rosenfeld, CMU
@@ -725,6 +725,13 @@ Workflow:
 Thoughts:
   Expected word accuracy / Word error rate is (near) linear with LOG perplexity
 SecretKey: log-linear
+```
+### [SceneNet RGB-D](other_ML/Scene-RGB-D.pdf)
+```
+SceneNet RGB-D: 5M Photorealistic Images of Synthetic Indoor Trajectories with Ground Truth
+John McCormac, ICCV 2017
+Workflow:
+  Drop objects from the ceiling -> automated camera trajectories -> rendering & groundtruth
 ```
 ## Slides
 ### [Word Vec CS224d-L2](Slides/CS224d-Lecture2.pdf)
