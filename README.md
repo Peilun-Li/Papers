@@ -54,6 +54,7 @@
   * [DNDF](#dndf)
   * [Selective Search](#selective-search)
   * [LM evaluation](#lm-evaluation)
+  * [SceneNet RGB-D](#scenenet-rgb-d)
 - [Slides](#slides)
   * [Word Vec CS224d-L2](#word-vec-cs224d-l2)
   * [Word Vec more CS224d-L3](#word-vec-more-cs224d-l3)
