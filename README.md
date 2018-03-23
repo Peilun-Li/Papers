@@ -727,7 +727,7 @@ Thoughts:
   Expected word accuracy / Word error rate is (near) linear with LOG perplexity
 SecretKey: log-linear
 ```
-### [SceneNet RGB-D](other_ML/Scene-RGB-D.pdf)
+### [SceneNet RGB-D](other_ML/SceneNet-RGB-D.pdf)
 ```
 SceneNet RGB-D: 5M Photorealistic Images of Synthetic Indoor Trajectories with Ground Truth
 John McCormac, ICCV 2017
