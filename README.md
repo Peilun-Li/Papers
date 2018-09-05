@@ -10,6 +10,7 @@
   * [SPP-net](#spp-net)
   * [Fast R-CNN](#fast-r-cnn)
   * [Faster R-CNN](#faster-r-cnn)
+  * [Mask-X-RCNN](#mask-x-rcnn)
   * [ImageNet CNN](#imagenet-cnn)
   * [Batch Normalization](#batch-normalization)
   * [Instance Normalization](#instance-normalization)
@@ -132,6 +133,18 @@ Workflow:
 Thoughts:
   Feature maps may be reused
 Concepts: anchor
+```
+### [Mask-X-RCNN](CNN/Mask-X-RCNN.pdf)
+```
+Learning to Segment Every Thing
+Ronghang Hu, BAIR & FAIR, CVPR 2018
+Workflow:
+  Partially supervised training paradigm with weight transfer function
+  Based on Mask RCNN: transfer learning from box weights to mask weights
+  Weight transfer function: class-agnostic
+Thoughts:
+  Instance segmentation with broad classes within the visual world
+SecretKey: Speed
 ```
 ### [ImageNet CNN](ImageNet-CNN.pdf)
 ```
