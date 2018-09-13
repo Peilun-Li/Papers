@@ -20,6 +20,7 @@
   * [Inception v2 & v3](#inception-v2--v3)
   * [Inception v4](#inception-v4)
   * [ResNet](#resnet)
+  * [ResNeXt](#resnext)
   * [DenseNet](#densenet)
   * [Survey of Semantic Segmentation](#survey-of-semantic-segmentation)
   * [FCN-SemanticSeg](#fcn-semanticseg)
@@ -295,6 +296,20 @@ Workflow:
 Thoughts:
   Identity map via shortcut (add)
 Concepts: deep residual learning
+```
+### [ResNeXt](CNN/ResNeXt.pdf)
+```
+Aggregated Residual Transformations for Deep Neural Networks
+Saining Xie, Ross Girshick, UCSD & FB, CVPR 2017
+Workflow:
+  Resnet with Inception's split-transform-merge strategy within each shorcut connection
+Thoughts:
+  Inception: split-transform-merge strategy
+  Increase cardinality (size of transformations set) may have better effect than increase depth and width
+  Group convolution helps reduce number of parameters (allowing higher cardinality)
+To read:
+  A. Krizhevsky, I. Sutskever, and G. Hinton. Im- agenet classification with deep convolutional neural networks. In NIPS, 2012. (Group Convolution)
+  M. Lin, Q. Chen, and S. Yan. Network in network. In ICLR, 2014. (Network in network)
 ```
 ### [DenseNet](CNN/DenseNet.pdf)
 ```
