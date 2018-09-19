@@ -10,6 +10,7 @@
   * [SPP-net](#spp-net)
   * [Fast R-CNN](#fast-r-cnn)
   * [Faster R-CNN](#faster-r-cnn)
+  * [Mask R-CNN](#mask-r-cnn)
   * [Mask-X-RCNN](#mask-x-rcnn)
   * [ImageNet CNN](#imagenet-cnn)
   * [Batch Normalization](#batch-normalization)
@@ -134,6 +135,17 @@ Workflow:
 Thoughts:
   Feature maps may be reused
 Concepts: anchor
+```
+### [Mask R-CNN](CNN/MaskRCNN.pdf)
+```
+Mask R-CNN
+Kaiming He, FAIR, ICCV 2017
+Workflow:
+  Extends Faster-RCNN: add a mask branch besides the box branch
+  RoIAlign: no quantization by using bilinear interpolation 
+Thoughts:
+  Decouple mask and classification: one mask per class (binary loss on mask instead of multinomial loss)
+  Artificial: 1000 RPN and only mask top 100
 ```
 ### [Mask-X-RCNN](CNN/Mask-X-RCNN.pdf)
 ```
