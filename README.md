@@ -43,6 +43,7 @@
   * [CycleGAN](#cyclegan)
   * [Wasserstein GAN](#wasserstein-gan)
   * [CoGAN](#cogan)
+  * [StarGAN](#stargan)
   * [Perceptual loss](#perceptual-loss)
 - [other NN](#other-nn)
   * [Neural Style](#neural-style)
@@ -648,6 +649,14 @@ Workflow:
   Learn joint distribution of multi-domain images without paired training data
     By sharing weight: first layers of G, and last layers of D (A GAN for each domain)
 Thoughts: Paired images in two domains share the same high-level concepts
+```
+### [StarGAN](GAN/StarGAN.pdf)
+```
+Workflow:
+  Multidomain image-to-image translation: 
+    Extra mask vector as input containing class label and dataset mask
+    CycleGAN with an extra classification loss for multi-dataset multi-domain
+  multi-task learning: only train a dataset's associated labels (not other datasets')
 ```
 ### [Perceptual loss](GAN/Perceptual-Loss.pdf)
 ```
