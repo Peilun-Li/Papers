@@ -15,6 +15,7 @@
   * [ImageNet CNN](#imagenet-cnn)
   * [Batch Normalization](#batch-normalization)
   * [Instance Normalization](#instance-normalization)
+  * [Group Normalization](#group-normalization)
   * [Deconv Network](#deconv-network)
   * [CRN](#crn)
   * [Inception](#inception)
@@ -211,6 +212,21 @@ Thoughts:
 Concepts: instance normalization (a.k.a. contrast normalization)
 To read:
   Ulyanov, D., Lebedev, V., Vedaldi, A., and Lempitsky, V. S. (2016). Texture networks: Feed-forward synthesis of textures and stylize images. In Proceedings of the 33nd International Conference on Machine Learning, ICML 2016, New York City, NY, USA, June 19-24, 2016, pages 1349–1357. (style transfer)
+```
+### [Group Normalization](CNN/GroupNorm.pdf)
+```
+Group Normalization
+Yuxin Wu, FAIR, ECCV 2018
+Workflow:
+  Group Norm: Group-level norm across channel dimension
+    Better performance than batch norm when batch size is small 
+Thoughts:
+  Reuse "old" knowledge: group-wise normalization
+  Group norm removes batch size constraint in batch norm
+Concepts: group-wise normalization
+To read:
+  SIFT and HOG
+  Y. LeCun, L. Bottou, G. B. Orr, and K.-R. Mu ̈ller. Efficient backprop. In Neural Networks: Tricks of the Trade. 1998. (normalizing makes training faster; initializing)
 ```
 ### [Deconv Network](CNN/Deconv.pdf)
 See also "A giude to convolution arithmetic for deep learning" [here](CNN/ConvGuide.pdf)
