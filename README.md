@@ -439,6 +439,18 @@ Workflow:
   Mirror input image for border prediction
 Concepts: overlap-tile strategy
 ```
+### [BagNets](CNN/BagNets.pdf)
+```
+Approximating CNNs with Bag-of-local-Features models works surprisingly well on ImageNet
+Wieland Brendel and Matthias Bethge, ICLR 2019
+Workflow:
+  Class activations on modified RestNet per image patch
+  Evaluate all patches to get one heatmap per class (Similar as sliding window on feature representations)
+  Average heat map and softmax to get class prediction
+  Similar results as state-of-the-art DNNs, but slower
+Thoughts:
+  Improvement of DNNs is because of fine-tuning, not better strategies. (But still based on ResNet)
+```
 ## RNN
 ### [RNN LM](RNN/RNNLM.pdf)
 ```
