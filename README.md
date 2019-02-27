@@ -24,10 +24,12 @@
   * [ResNet](#resnet)
   * [ResNeXt](#resnext)
   * [DenseNet](#densenet)
+  * [ShuffleNet](#shufflenet)
   * [Survey of Semantic Segmentation](#survey-of-semantic-segmentation)
   * [FCN-SemanticSeg](#fcn-semanticseg)
   * [Multi Task Domain Adaptation](#multi-task-domain-adaptation)
   * [U-Net](#u-net)
+  * [BagNets](#bagnets)
 - [RNN](#rnn)
   * [RNN LM](#rnn-lm)
   * [BRNN](#brnn)
@@ -368,6 +370,15 @@ To read:
   C.-Y.Lee,S.Xie,P.Gallagher,Z.Zhang,andZ.Tu.Deeply- supervised nets. In AISTATS, 2015. (deep supervision)
   G. Huang, Y. Sun, Z. Liu, D. Sedra, and K. Q. Weinberger. Deep networks with stochastic depth. (Stochastic depth regularization for resnet)
 SecretKey: ResNet<->RNN
+```
+### [ShuffleNet](CNN/ShuffleNet.pdf)
+```
+ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices
+Xiangyu Zhang, Xinyu Zhou, Face++, CVPR 2018
+Workflow:
+  Pointwise group convolution to reduce computation
+  Channel shuffle to fully relate channels in different groups
+  Use depthwise convolution
 ```
 ### [Survey of Semantic Segmentation](CNN/Survey_SemanticSeg.pdf)
 ```
