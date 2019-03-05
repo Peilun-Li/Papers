@@ -21,6 +21,7 @@
   * [Inception](#inception)
   * [Inception v2 & v3](#inception-v2--v3)
   * [Inception v4](#inception-v4)
+  * [Xception](#xception)
   * [ResNet](#resnet)
   * [ResNeXt](#resnext)
   * [DenseNet](#densenet)
@@ -317,6 +318,15 @@ Workflow:
   Inception-v4: deeper and optimized version of inception v3
   Inception-ResNet-v2: combine inception with resnet
 Concepts: Inception-v4, Inception-ResNet-v2
+```
+### [Xception](CNN/Xception.pdf)
+```
+Francois Chollet, Google, CVPR 2017
+Workflow:
+  Replace INception modules with depthwise separable convs with residual connections
+  Absense of non-linearity within separable convs leads to faster training and performance
+Thought:
+  Extreme form of Inception module is almost identical to depthwise separable conv
 ```
 ### [ResNet](CNN/ResNet.pdf)
 ```
