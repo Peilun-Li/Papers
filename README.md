@@ -77,6 +77,7 @@
   * [MDP to RL CS234-L2](#mdp-to-rl-cs234-l2)
   * [Monte Carlo and Generalization CS234-L3](#monte-carlo-and-generalization-cs234-l3)
   * [Model Free Methods and Approximation](#model-free-methods-and-approximation)
+  * [RNN](#rnn-1)
 
 <!-- tocstop -->
 
@@ -967,4 +968,18 @@ Workflow:
   Feature selection:
     Domain knowledge
     Flexible set of features & regularize
+```
+### [RNN](Slides/cs231n_2019_lecture10.pdf)
+```
+Video: https://www.youtube.com/watch?v=6niqTuYFZLQ&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=11&t=0s
+Output is derived from hidden state
+Truncated backpropagation through time: minibatch through time
+Attention: two inputs and outputs 
+  Target, e.g., vocabulary distribution to sample, and, 
+  Attention, e.g., location distributions to focus on in next time step)
+Multilayer RNNs: usually not deep (3-4 layers)
+RNN vs LSTM: LSTM has an extra C hidden state, enabling uninterrupted gradient flow through the very beginning 
+  Prevent gradient exploding: sigmoid and addition (LSTM or GRU), or gradient clipping in vanilla RNN 
+  Prevent gradient vanishment: C state
+  C state behaves like skip connections in ResNet
 ```
