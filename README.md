@@ -978,8 +978,11 @@ Attention: two inputs and outputs
   Target, e.g., vocabulary distribution to sample, and, 
   Attention, e.g., location distributions to focus on in next time step)
 Multilayer RNNs: usually not deep (3-4 layers)
+LSTM
+  Extra c hidden states besides h hidden state
+  ifog: i(nput) gate, f(orget) gate, o(utput) gate, g(ate) gate
 RNN vs LSTM: LSTM has an extra C hidden state, enabling uninterrupted gradient flow through the very beginning 
   Prevent gradient exploding: sigmoid and addition (LSTM or GRU), or gradient clipping in vanilla RNN 
-  Prevent gradient vanishment: C state
+  Prevent gradient vanishment: C state, init f gate to 1 (do not forget initially)
   C state behaves like skip connections in ResNet
 ```
