@@ -49,6 +49,8 @@
   * [CoGAN](#cogan)
   * [StarGAN](#stargan)
   * [Perceptual loss](#perceptual-loss)
+- [GNN](#gnn)
+  * [GNN](#gnn-1)
 - [other NN](#other-nn)
   * [Neural Style](#neural-style)
 - [OCR (Document Understanding)](#ocr-document-understanding)
@@ -718,6 +720,43 @@ Workflow:
     Style reconstruction loss
 To read: 
   Vondrick, C., Khosla, A., Malisiewicz, T., Torralba, A.: Hoggles: Visualizing ob- ject detection features. In: Proceedings of the IEEE International Conference on Computer Vision. (2013) 1–8 (HOG loss)
+```
+## GNN
+### [GNN](GNN/GNN.pdf)
+```
+Relational inductive biases, deep learning, and graph networks
+Peter W. Battaglia, DeepMind
+Workflow:
+  Key design principles:
+    Flexible representations: structure could be either set or inferred (or in between)
+    Configurable within-block structure: computation steps and functions could be changed
+    Composable multi-block architectures: GN blocks can be stacked
+  Computation steps (order could be changed depending on tasks):
+    Update edges; 
+    Edges effect on nodes; 
+    Update node; 
+    Summing edges for global attributes; 
+    Summing nodes for global attributes; 
+    Update global attributes
+  Implement:
+    Nodes and edges updates could be treated like the batch dimension for mini-batch training
+  Open questions:
+    How to init graph structure?
+    How to modify graph structure adaptively during computation?
+Thoughts:
+  Biology: nature join with nurture <-> AI: structure join with flexibility
+  Representations and structure of entities and relations can be learnt instead of explicit definition
+  Inductive biase often trades flexibility with complexity
+  Graph supports arbitrary relational structure, providing better inductive bias than CNN/RNN
+  Relational inductive biases in GN:
+    Representations/Relations are defined in input, rather than the architecture (as in CNN/RNN)
+    GN is invariant to permutations, and supports combinatorial generalization (infinite use of finite means)
+Concepts: relational inductive biases, GN block (graph-to-graph module)
+To read:
+  Watters, N., Zoran, D., Weber, T., Battaglia, P., Pascanu, R., and Tacchetti, A. (2017). Visual interaction networks: Learning a physics simulator from video. In Advances in Neural Information Processing Systems, pages 4542–4550. (init graph structure)
+  van Steenkiste, S., Chang, M., Greff, K., and Schmidhuber, J. (2018). Relational neural expectation maximization: Unsupervised discovery of objects and their interactions. Proceedings of the International Conference on Learning Representations (ICLR). (init graph structure)
+  Li, Y., Vinyals, O., Dyer, C., Pascanu, R., and Battaglia, P. (2018). Learning deep generative models of graphs. In Workshops at the International Conference on Learning Representations (ICLR). (init graph structure, modify graph structure in runtime)
+  Kipf, T., Fetaya, E., Wang, K.-C., Welling, M., and Zemel, R. (2018). Neural relational inference for interacting systems. In Proceedings of the International Conference on Machine Learning (ICML). (init graph structure, modify graph structure in runtime)
 ```
 ## other NN
 ### [Neural Style](other_NN/Neural-Style.pdf)
