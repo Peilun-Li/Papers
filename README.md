@@ -49,6 +49,7 @@
   * [CoGAN](#cogan)
   * [StarGAN](#stargan)
   * [Perceptual loss](#perceptual-loss)
+  * [Learning not to learn](#learning-not-to-learn)
 - [GNN](#gnn)
   * [GNN](#gnn-1)
 - [other NN](#other-nn)
@@ -720,6 +721,17 @@ Workflow:
     Style reconstruction loss
 To read: 
   Vondrick, C., Khosla, A., Malisiewicz, T., Torralba, A.: Hoggles: Visualizing ob- ject detection features. In: Proceedings of the IEEE International Conference on Computer Vision. (2013) 1–8 (HOG loss)
+```
+### [Learning not to learn](GAN/Learning_Not_to_Learn.pdf)
+```
+Learning Not to Learn: Training Deep Neural Networks with Biased Data
+Byungju Kim, CVPR 2019
+Workflow:
+  Regulate a network to minimize mutual information between extracted features and bias
+    Mutual information -> reformulated as auxiliary dist. -> relaxed to KL divergency -> relaxed to cross-entropy loss
+    Classification loss + (adversarial fashion) bias prediction loss + bias loss
+Thoughts:
+  Remove bias information will help learn useful features
 ```
 ## GNN
 ### [GNN](GNN/GNN.pdf)
