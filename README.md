@@ -66,6 +66,7 @@
   * [Selective Search](#selective-search)
   * [LM evaluation](#lm-evaluation)
   * [SceneNet RGB-D](#scenenet-rgb-d)
+  * [SoDeep](#sodeep)
 - [Slides](#slides)
   * [Word Vec CS224d-L2](#word-vec-cs224d-l2)
   * [Word Vec more CS224d-L3](#word-vec-more-cs224d-l3)
@@ -883,6 +884,14 @@ SceneNet RGB-D: 5M Photorealistic Images of Synthetic Indoor Trajectories with G
 John McCormac, ICCV 2017
 Workflow:
   Drop objects from the ceiling -> automated camera trajectories -> rendering & groundtruth
+```
+### [SoDeep](other_ML/SoDeep.pdf)
+```
+SoDeep: a Sorting Deep net to learn ranking loss surrogates, Martin Engilberge, CVPR 2019
+Workflow:
+  Learn differentiable surragate functions
+Thoughts:
+  Surrogate loss for non-differentiable metric -> Train a network to learn that metric for differentiable loss
 ```
 ## Slides
 ### [Word Vec CS224d-L2](Slides/CS224d-Lecture2.pdf)
